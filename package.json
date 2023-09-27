@@ -6,7 +6,9 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "nest build",
+    "build:watch": "nest build --watch",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -18,8 +20,10 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "build:watch": "nest build --watch",
-    "serve": "npm run build && firebase emulators:start --only functions",
+    "get:config": "firebase functions:config:get > .runtimeconfig.json",
+    "firebase:emulator": "firebase emulators:start --only functions",
+    "serve": "npm run get:config && npm run build && npm run firebase:emulator",
+    "serve:watch": "concurrently npm:get:config npm:build && concurrently npm:build:watch npm:firebase:emulator",
     "shell": "npm run build && firebase functions:shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"

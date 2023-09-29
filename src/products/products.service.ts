@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as admin from 'firebase-admin';
+import { CreateProductDto } from './create-product.dto';
 
 @Injectable()
 export class ProductsService {
@@ -15,6 +16,17 @@ export class ProductsService {
     });
 
     return products;
+  }
+
+  async createProduct(createProductDto: CreateProductDto) {
+    const { id, image, name, quantity } = createProductDto;
+    const productsRef = admin.firestore().collection('products');
+
+    // Add the product to Firestore
+    const productData = { id, image, name, quantity };
+    const result = await productsRef.add(productData);
+
+    return { id: result.id, ...productData };
   }
 
 }

@@ -11,5 +11,7 @@ export class User {
   @Column()
   email: string;
 
+  @Column()
+  name: string;
   // Add more user properties as needed
 }

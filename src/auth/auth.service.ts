@@ -7,18 +7,20 @@ import { User } from './user.entity';
 export class AuthService {
 
     async createUser(signupDto: SignupDto): Promise<User> {
-        const { email, password } = signupDto;
+        const { email, password, name } = signupDto;
     
         // Create the user in Firebase Authentication
         const userRecord = await admin.auth().createUser({
           email,
           password,
+          displayName: name,
         });
     
         // Save additional user data in your database
         const newUser = new User();
         newUser.uid = userRecord.uid;
         newUser.email = userRecord.email;
+        newUser.name = name;
         // Set other user properties as needed
     
         // Save the user in your database

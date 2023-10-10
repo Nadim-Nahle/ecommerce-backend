@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import * as admin from 'firebase-admin';
 import { CreateProductDto } from './create-product.dto';
+import { Product } from './product.interface';
 
 @Injectable()
 export class ProductsService {
@@ -36,6 +37,34 @@ export class ProductsService {
     const result = await productsRef.add(productData);
 
     return { id: result.id, ...productData };
+  }
+
+  async updateProduct(id: string, updatedProductData: Partial<Product>): Promise<void> {
+    const productRef = admin.firestore().collection('products').doc(id);;
+
+    try {
+      await productRef.update(updatedProductData);
+    } catch (error) {
+      // Handle errors, such as product not found or Firestore update error
+      throw new Error(`Error updating product: ${error.message}`);
+    }
+  }
+
+  async getProductById(id: string): Promise<Product | null> {
+    const productRef = admin.firestore().collection('products').doc(id);
+
+    try {
+      const productSnapshot = await productRef.get();
+
+      if (productSnapshot.exists) {
+        const productData = productSnapshot.data() as Product;
+        return { id: productSnapshot.id, ...productData };
+      }
+
+      return null; // Product not found
+    } catch (error) {
+      throw new Error(`Error fetching product: ${error.message}`);
+    }
   }
 
 }

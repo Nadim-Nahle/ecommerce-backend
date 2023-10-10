@@ -12,18 +12,27 @@ export class ProductsService {
 
     const products = [];
     snapshot.forEach((doc) => {
-      products.push({ id: doc.id, ...doc.data() });
+      const data = doc.data();
+      const modifiedProduct = {
+        id: doc.id,
+        pNumber: data.pNumber,
+        name: data.name,
+        description: data.description,
+        quantity: data.quantity,
+        image: data.image,
+      };
+      products.push(modifiedProduct);
     });
 
     return products;
   }
 
   async createProduct(createProductDto: CreateProductDto) {
-    const { id, image, name, quantity } = createProductDto;
+    const { pNumber, image, name, description, quantity } = createProductDto;
     const productsRef = admin.firestore().collection('products');
 
     // Add the product to Firestore
-    const productData = { id, image, name, quantity };
+    const productData = { pNumber, name, description, image, quantity };
     const result = await productsRef.add(productData);
 
     return { id: result.id, ...productData };

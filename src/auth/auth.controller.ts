@@ -1,8 +1,8 @@
-import { Controller, Post, Body, UsePipes, ValidationPipe } from '@nestjs/common';
+import { Controller, Post, Body, UsePipes, ValidationPipe, Get, Response } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { SignupDto } from './signup.dto';
 
-@Controller('auth')
+@Controller('')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
@@ -13,5 +13,13 @@ export class AuthController {
 
     // Return a success response or JWT token, if needed
     return { message: 'User registered successfully', user };
+  }
+  
+  @Get('users')
+  async getAllUsers(@Response() response: any) {
+    const users = await this.authService.getAllUsers();
+    const totalCount = users.length; // You can modify this to get the actual count
+    response.header('X-Total-Count', totalCount.toString()); // Set the X-Total-Count header
+    return response.json(users)
   }
 }

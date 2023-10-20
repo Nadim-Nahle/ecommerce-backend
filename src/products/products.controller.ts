@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Response, Put,Param, NotFoundException } from '@nestjs/common';
+import { Controller, Get, Post, Body, Response, Put,Param, NotFoundException, ValidationPipe, UsePipes } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './create-product.dto';
 import { Product } from './product.interface';
@@ -17,6 +17,7 @@ export class ProductsController {
   };
 
   @Post('add')
+  @UsePipes(new ValidationPipe())
   create(@Body() createProductDto: CreateProductDto) {
     return this.productsService.createProduct(createProductDto);
   }

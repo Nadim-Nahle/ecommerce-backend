@@ -51,6 +51,17 @@ export class ProductsService {
     return { id: result.id, ...productData };
   }
 
+  async updateProduct(id: string, updatedProductData: Partial<Product>): Promise<void> {
+    const productRef = admin.firestore().collection('products').doc(id);;
+
+    try {
+      await productRef.update(updatedProductData);
+    } catch (error) {
+      // Handle errors, such as product not found or Firestore update error
+      throw new Error(`Error updating product: ${error.message}`);
+    }
+  }
+  
   async getProductById(id: string): Promise<Product | null> {
     const productRef = admin.firestore().collection('products').doc(id);
 

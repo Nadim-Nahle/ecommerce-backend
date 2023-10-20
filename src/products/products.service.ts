@@ -21,6 +21,7 @@ export class ProductsService {
         description: data.description,
         quantity: data.quantity,
         image: data.image,
+        price: data.price,
       };
       products.push(modifiedProduct);
     });
@@ -29,25 +30,25 @@ export class ProductsService {
   }
 
   async createProduct(createProductDto: CreateProductDto) {
-    const { pNumber, image, name, description, quantity } = createProductDto;
+    const { pNumber, image, name, description, quantity, price } = createProductDto;
     const productsRef = admin.firestore().collection('products');
 
-    // Add the product to Firestore
-    const productData = { pNumber, name, description, image, quantity };
+    // Check for the uniqueness of pNumber in a Firestore transaction
+    const querySnapshot = await productsRef.where('pNumber', '==', pNumber).get();
+
+    if (!querySnapshot.empty) {
+        // pNumber is not unique, return an error response
+        return {
+            error: 'pNumber must be unique',
+            status: 400,
+        };
+    }
+
+    // If pNumber is unique, add the product to Firestore
+    const productData = { pNumber, name, description, image, quantity, price };
     const result = await productsRef.add(productData);
 
     return { id: result.id, ...productData };
-  }
-
-  async updateProduct(id: string, updatedProductData: Partial<Product>): Promise<void> {
-    const productRef = admin.firestore().collection('products').doc(id);;
-
-    try {
-      await productRef.update(updatedProductData);
-    } catch (error) {
-      // Handle errors, such as product not found or Firestore update error
-      throw new Error(`Error updating product: ${error.message}`);
-    }
   }
 
   async getProductById(id: string): Promise<Product | null> {

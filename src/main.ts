@@ -10,6 +10,7 @@ async function bootstrap() {
     origin: '*', // or '*' for any origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
+    allowedHeaders: ['auth-api', 'Content-Type'],
   });
   await app.listen(3000);
 }

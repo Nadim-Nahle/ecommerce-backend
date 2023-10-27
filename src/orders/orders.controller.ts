@@ -2,6 +2,10 @@ import { Controller, Post, Body, UsePipes, ValidationPipe } from '@nestjs/common
 import * as admin from 'firebase-admin';
 import { CreateOrderDTO } from './create-order.dto';
 
+const accountSid = process.env.ACCOUNT_SID;
+const authToken = process.env.AUTH_TOKEN;
+const client = require('twilio')(accountSid, authToken);
+
 @Controller('orders')
 export class OrdersController {
     @Post()
@@ -45,6 +49,13 @@ export class OrdersController {
 
       // Respond with the created order's data
       const newOrder = (await newOrderRef.get()).data();
+      await client.messages
+      .create({
+          body: `phone number:${newOrder.phone_number}, ${JSON.stringify(orderDetails)}`,
+          from: 'whatsapp:+14155238886',
+          to: 'whatsapp:+9613942350'
+      })
+      .then(message => console.log(message.sid))
       return {
         phone_number: newOrder.phone_number,
         orderDetails,

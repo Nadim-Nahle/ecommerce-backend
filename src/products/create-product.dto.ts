@@ -3,7 +3,7 @@ import { IsString, IsNotEmpty, IsNumber } from 'class-validator';
 export class CreateProductDto {
     @IsNotEmpty({ message: 'id is required' })
     @IsString()
-    pNumber: string;
+    ref: string;
 
     @IsNotEmpty(({ message: 'name is required' }))
     @IsString()
@@ -16,6 +16,10 @@ export class CreateProductDto {
     @IsNotEmpty(({ message: 'description is required' }))
     @IsString()
     description: string;
+
+    @IsNotEmpty(({ message: 'category is required' }))
+    @IsString()
+    category: string;
 
     @IsNotEmpty(({ message: 'quantity is required' }))
     @IsNumber()

@@ -16,9 +16,10 @@ export class ProductsService {
       const data = doc.data();
       const modifiedProduct = {
         id: doc.id,
-        pNumber: data.pNumber,
+        ref: data.ref,
         name: data.name,
         description: data.description,
+        category: data.category,
         quantity: data.quantity,
         image: data.image,
         price: data.price,
@@ -30,22 +31,22 @@ export class ProductsService {
   }
 
   async createProduct(createProductDto: CreateProductDto) {
-    const { pNumber, image, name, description, quantity, price } = createProductDto;
+    const { ref, image, name, description, quantity, price, category } = createProductDto;
     const productsRef = admin.firestore().collection('products');
 
-    // Check for the uniqueness of pNumber in a Firestore transaction
-    const querySnapshot = await productsRef.where('pNumber', '==', pNumber).get();
+    // Check for the uniqueness of ref in a Firestore transaction
+    const querySnapshot = await productsRef.where('ref', '==', ref).get();
 
     if (!querySnapshot.empty) {
-        // pNumber is not unique, return an error response
+        // ref is not unique, return an error response
         return {
-            error: 'pNumber must be unique',
+            error: 'ref must be unique',
             status: 400,
         };
     }
 
-    // If pNumber is unique, add the product to Firestore
-    const productData = { pNumber, name, description, image, quantity, price };
+    // If ref is unique, add the product to Firestore
+    const productData = { ref, name, description, image, quantity, price, category };
     const result = await productsRef.add(productData);
 
     return { id: result.id, ...productData };

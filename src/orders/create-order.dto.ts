@@ -18,6 +18,10 @@ export class ProductDTO {
   @IsNotEmpty({ message: 'name is required' })
   product_name: string;
 
+  @IsString()
+  @IsNotEmpty({ message: 'name is required' })
+  product_ref: string;
+
   @IsNumber()
   @IsNotEmpty({ message: 'price is required' })
   product_price: number;

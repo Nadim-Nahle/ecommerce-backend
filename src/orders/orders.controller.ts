@@ -42,6 +42,30 @@ export class OrdersController {
 
       // Respond with the created order's data
       const newOrder = (await newOrderRef.get()).data();
+      const productPromises = products.map(async (product) => {
+        const productQuery = await admin.firestore().collection('products')
+          .where('ref', '==', product.product_ref) // Use your unique identifier
+          .limit(1)
+          .get();
+  
+        if (productQuery.empty) {
+          throw new Error(`Product not found: ${product.product_ref}`);
+        }
+  
+        const productDoc = productQuery.docs[0];
+        const currentQuantity = productDoc.data().quantity;
+        const newQuantity = currentQuantity - product.quantity;
+  
+        if (newQuantity < 0) {
+          throw new Error(`Not enough quantity available for product: ${product.product_ref}`);
+        }
+  
+        // Update the quantity for this product
+        await productDoc.ref.update({ quantity: newQuantity });
+      });
+  
+      await Promise.all(productPromises);
+  
       await client.messages
         .create({
           body: `phone number:${newOrder.phone_number}, ${JSON.stringify(newOrder.products)}`,

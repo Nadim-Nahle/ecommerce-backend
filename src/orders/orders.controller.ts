@@ -8,25 +8,29 @@ const fs = require('fs');
 var publicUrl;
 // Replace with your Google Cloud Storage bucket name and PDF file path
 const bucketName = 'leprince_pdf';
-const pdfFilePath = 'order.pdf';
+const pdfFilePath = '/tmp/order.pdf';
 
 const accountSid = 'ACbd28c015da2c8a0bce32fa78ccb2875a';
 const authToken = 'f32425eb589c91ae5953fc2d7fc48d67';
 const client = require('twilio')(accountSid, authToken);
 
 const storage = new Storage();
-async function uploadPDF() {
-  // Uploads a local file to the bucket
+
+async function uploadPDF(orderNumber) {
   await storage.bucket(bucketName).upload(pdfFilePath, {
+    destination: `${orderNumber}.pdf`,
     gzip: true,
     metadata: {
-      cacheControl: 'public, max-age=31536000', // Optional cache control settings
+      cacheControl: 'no-cache',
     },
   });
 
   console.log(`${pdfFilePath} uploaded to ${bucketName}.`);
 }
+
 async function getPDFPublicURL() {
+  await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5 seconds (adjust as needed)
+
   const [files] = await storage.bucket(bucketName).getFiles({ prefix: pdfFilePath });
   if (files.length > 0) {
     const pdfFile = files[0];
@@ -36,12 +40,10 @@ async function getPDFPublicURL() {
     console.log('PDF file not found.');
   }
 }
-uploadPDF().catch(console.error);
-getPDFPublicURL().catch(console.error);
 
 const createPDF = async (message) => {
   const pdfDoc = new PDFDocument();
-  const pdfStream = fs.createWriteStream('order.pdf'); // Create a write stream to save the PDF
+  const pdfStream = fs.createWriteStream('/tmp/order.pdf'); // Create a write stream to save the PDF
   pdfDoc.pipe(pdfStream);
 
   pdfDoc.fontSize(16).text('Order Details:', { align: 'center' });
@@ -118,11 +120,14 @@ export class OrdersController {
       const productsList = newOrder.products.map(product => `Name: ${product.product_name},\nRef: ${product.product_ref},\nQuantity: ${product.quantity}`).join('\n\n');
       const message = `Name: ${newOrder.phone_number}\n\nProducts:\n${productsList}\n\nOrder Number: ${newOrder.order_number}\n `;
       const pdfStream = await createPDF(message);
+      await uploadPDF(newOrder.order_number).catch(console.error);
+      await getPDFPublicURL().catch(console.error);
       await client.messages
         .create({
           body: message,
           from: 'whatsapp:+14155238886',
-          to: 'whatsapp:+24107069719'
+          to: 'whatsapp:+24107069719',
+          mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
         })
         .then((message) => console.log(message.sid));
 
@@ -131,7 +136,7 @@ export class OrdersController {
           body: message,
           from: 'whatsapp:+14155238886',
           to: 'whatsapp:+9613942350',
-          mediaUrl: ['https://storage.googleapis.com/leprince_pdf/order.pdf']
+          mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
         })
         .then((message) => console.log(message.sid));
       return {

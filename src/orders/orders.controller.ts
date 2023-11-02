@@ -65,12 +65,20 @@ export class OrdersController {
       });
   
       await Promise.all(productPromises);
-  
+      const productsList = newOrder.products.map(product => `Name: ${product.product_name},\nRef: ${product.product_ref},\nQuantity: ${product.quantity}`).join('\n\n');
+      const message = `Name: ${newOrder.phone_number}\n\nProducts:\n${productsList}\n\nOrder Number: ${newOrder.order_number}\n `;
       await client.messages
         .create({
-          body: `phone number:${newOrder.phone_number}, ${JSON.stringify(newOrder.products)}`,
+          body: message,
           from: 'whatsapp:+14155238886',
-          to: 'whatsapp:+9613942350',
+          to: 'whatsapp:+24107069719'
+        })
+        .then((message) => console.log(message.sid));
+      await client.messages
+        .create({
+          body: message,
+          from: 'whatsapp:+14155238886',
+          to: 'whatsapp:+9613942350'
         })
         .then((message) => console.log(message.sid));
       return {

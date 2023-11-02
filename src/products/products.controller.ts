@@ -16,6 +16,15 @@ export class ProductsController {
     return response.json(products)
   };
 
+  @Get('category')
+  async getAllCategories(@Response() response: any) {
+    const categories = await this.productsService.getAllCategories();
+    const totalCount = categories.length; // You can modify this to get the actual count
+    response.header('X-Total-Count', totalCount.toString()); // Set the X-Total-Count header
+
+    return response.json(categories)
+  };
+
   @Post('add')
   @UsePipes(new ValidationPipe())
   create(@Body() createProductDto: CreateProductDto) {

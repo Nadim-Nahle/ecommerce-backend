@@ -29,6 +29,23 @@ export class ProductsService {
 
     return products;
   }
+  async getAllCategories() {
+
+    const productsRef = admin.firestore().collection('categories');
+    const snapshot = await productsRef.get();
+
+    const categories = [];
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+      const modifiedCategory = {
+        id: doc.id,
+        name: data.name,
+      };
+      categories.push(modifiedCategory);
+    });
+
+    return categories;
+  }
 
   async createProduct(createProductDto: CreateProductDto) {
     const { ref, image, name, description, quantity, price, category } = createProductDto;

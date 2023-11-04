@@ -18,7 +18,6 @@ export class ProductsService {
         id: doc.id,
         ref: data.ref,
         name: data.name,
-        description: data.description,
         category: data.category,
         quantity: data.quantity,
         image: data.image,
@@ -48,7 +47,7 @@ export class ProductsService {
   }
 
   async createProduct(createProductDto: CreateProductDto) {
-    const { ref, image, name, description, quantity, price, category } = createProductDto;
+    const { ref, image, name, quantity, price, category } = createProductDto;
     const productsRef = admin.firestore().collection('products');
 
     // Check for the uniqueness of ref in a Firestore transaction
@@ -63,7 +62,7 @@ export class ProductsService {
     }
 
     // If ref is unique, add the product to Firestore
-    const productData = { ref, name, description, image, quantity, price, category };
+    const productData = { ref, name, image, quantity, price, category };
     const result = await productsRef.add(productData);
 
     return { id: result.id, ...productData };
@@ -94,6 +93,24 @@ export class ProductsService {
       return null; // Product not found
     } catch (error) {
       throw new Error(`Error fetching product: ${error.message}`);
+    }
+  }
+
+  async deleteProduct(id: string): Promise<void> {
+    const productRef = admin.firestore().collection('products').doc(id);
+
+    try {
+      const snapshot = await productRef.get();
+
+      if (!snapshot.exists) {
+        // Handle the case where the product with the given ID doesn't exist
+        throw new Error(`Product with ID ${id} not found`);
+      }
+
+      await productRef.delete();
+    } catch (error) {
+      // Handle errors, such as Firestore delete error
+      throw new Error(`Error deleting product: ${error.message}`);
     }
   }
 

@@ -1,13 +1,17 @@
-import { IsEmail, IsString, Length } from 'class-validator';
+import { IsString, IsEmail, MinLength, IsOptional } from 'class-validator';
 
 export class SignupDto {
   @IsEmail()
   email: string;
 
   @IsString()
-  @Length(6, 20)
+  @MinLength(6)
   password: string;
 
   @IsString()
-  name: string
+  name: string;
+
+  @IsString()
+  @IsOptional() // Make the 'role' field optional
+  role?: string;
 }

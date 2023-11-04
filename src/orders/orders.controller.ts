@@ -117,7 +117,7 @@ export class OrdersController {
       });
       
       await Promise.all(productPromises);
-      const productsList = newOrder.products.map(product => `Name: ${product.product_name},\nRef: ${product.product_ref},\nQuantity: ${product.quantity}`).join('\n\n');
+      const productsList = newOrder.products.map(product => `Ref: ${product.product_ref}, Quantity: ${product.quantity}`).join('\n\n');
       const message = `Name: ${newOrder.phone_number}\n\nProducts:\n${productsList}\n\nOrder Number: ${newOrder.order_number}\n `;
       const pdfStream = await createPDF(message);
       await uploadPDF(newOrder.order_number).catch(console.error);
@@ -126,7 +126,7 @@ export class OrdersController {
         .create({
           body: message,
           from: 'whatsapp:+14155238886',
-          to: 'whatsapp:+24107069719',
+          to: 'whatsapp:+24162101099',
           mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
         })
         .then((message) => console.log(message.sid));

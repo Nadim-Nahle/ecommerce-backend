@@ -13,10 +13,6 @@ export class CreateProductDto {
     @IsString()
     image: string;
 
-    @IsNotEmpty(({ message: 'description is required' }))
-    @IsString()
-    description: string;
-
     @IsNotEmpty(({ message: 'category is required' }))
     @IsString()
     category: string;

@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Response, Put,Param, NotFoundException, ValidationPipe, UsePipes } from '@nestjs/common';
+import { Controller, Get, Post, Body, Response, Put,Param, NotFoundException, ValidationPipe, UsePipes, Delete } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './create-product.dto';
 import { Product } from './product.interface';
@@ -25,7 +25,7 @@ export class ProductsController {
     return response.json(categories)
   };
 
-  @Post('add')
+  @Post()
   @UsePipes(new ValidationPipe())
   create(@Body() createProductDto: CreateProductDto) {
     return this.productsService.createProduct(createProductDto);
@@ -41,6 +41,21 @@ export class ProductsController {
 
     return response.json(updatedProduct);
   }
+
+  @Delete(':id')
+async deleteProduct(@Param('id') id: string, @Response() response: any): Promise<any> {
+  try {
+    await this.productsService.deleteProduct(id);
+    return response.status(204).send(); // Product successfully deleted
+  } catch (error) {
+    if (error.message === `Product with ID ${id} not found`) {
+      return response.status(404).json({ message: `Product with ID ${id} not found` });
+    } else {
+      return response.status(500).json({ message: 'Internal server error' });
+    }
+  }
+}
+
 
   @Get(':id')
   async getProductById(@Param('id') id: string): Promise<Product> {

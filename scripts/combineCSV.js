@@ -5,488 +5,490 @@ const fs = require('fs');
 const productsFile = '../assets/products.json';
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://your-project-id.firebaseio.com', // Replace with your Firestore database URL
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: 'https://your-project-id.firebaseio.com', // Replace with your Firestore database URL
 });
 
 const db = admin.firestore();
 
 var cosmetics = [
+
     {
-        "link": "https://i.ibb.co/0CQRDCm/BDB001.jpg"
+        "link": "https://i.ibb.co/MMr2yGb/BDB001.jpg"
     },
     {
-        "link": "https://i.ibb.co/MSXhqwq/BAU005.jpg"
+        "link": "https://i.ibb.co/zH5c87F/BDB011.jpg"
     },
     {
-        "link": "https://i.ibb.co/HrRSvkr/CHA009.jpg"
+        "link": "https://i.ibb.co/dMsvWS8/CHA009.jpg"
     },
     {
-        "link": "https://i.ibb.co/LQ3yNNV/BDB011.jpg"
+        "link": "https://i.ibb.co/rsXX3Ng/CR002.jpg"
     },
     {
-        "link": "https://i.ibb.co/3pXyRwq/CR002.jpg"
+        "link": "https://i.ibb.co/5Mwm8Rh/CR005.jpg"
     },
     {
-        "link": "https://i.ibb.co/TgzhRJK/CR005.jpg"
+        "link": "https://i.ibb.co/kmt4w73/CR006.jpg"
     },
     {
-        "link": "https://i.ibb.co/TcKdF4L/CR006.jpg"
+        "link": "https://i.ibb.co/NVkKyLN/CRE001.jpg"
     },
     {
-        "link": "https://i.ibb.co/r338Hpx/CRE001.jpg"
+        "link": "https://i.ibb.co/VxFMPy0/CRE002.jpg"
     },
     {
-        "link": "https://i.ibb.co/fYb45mn/CRE002.jpg"
+        "link": "https://i.ibb.co/ZBxmDBB/CRE009.jpg"
     },
     {
-        "link": "https://i.ibb.co/WKKxkcg/CRE009.jpg"
+        "link": "https://i.ibb.co/Dr3RRx2/CRE018.jpg"
     },
     {
-        "link": "https://i.ibb.co/VNS0Htk/CRE010.jpg"
+        "link": "https://i.ibb.co/xS6zjT3/CRE010.jpg"
     },
     {
-        "link": "https://i.ibb.co/tpMm1VQ/CRE018.jpg"
+        "link": "https://i.ibb.co/CwnzPvH/CRE022.jpg"
     },
     {
-        "link": "https://i.ibb.co/8PY2Jng/CRE022.jpg"
+        "link": "https://i.ibb.co/dMrXbSX/CRE026.jpg"
     },
     {
-        "link": "https://i.ibb.co/SxvhQLV/CRE026.jpg"
+        "link": "https://i.ibb.co/N6gw2HD/CRE030.jpg"
     },
     {
-        "link": "https://i.ibb.co/nQdnYNm/CRE035.jpg"
+        "link": "https://i.ibb.co/xGB5CT8/CRE035.jpg"
     },
     {
-        "link": "https://i.ibb.co/kH5FCgC/CRE030.jpg"
+        "link": "https://i.ibb.co/DbJ46Wn/DEF004.jpg"
     },
     {
-        "link": "https://i.ibb.co/pLcTTKF/DEF004.jpg"
+        "link": "https://i.ibb.co/GHmJ2DV/DEF005.jpg"
     },
     {
-        "link": "https://i.ibb.co/jzB5GbQ/DEF005.jpg"
+        "link": "https://i.ibb.co/25xvXxm/DEF007.jpg"
     },
     {
-        "link": "https://i.ibb.co/VxLk13f/DEF007.jpg"
+        "link": "https://i.ibb.co/HKzRZRK/DEM001.jpg"
     },
     {
-        "link": "https://i.ibb.co/51npz02/DEM001.jpg"
+        "link": "https://i.ibb.co/9VgSvnr/DEO021.jpg"
     },
     {
-        "link": "https://i.ibb.co/zRzGckd/DEO021.jpg"
+        "link": "https://i.ibb.co/F7QSLy4/DOD002.jpg"
     },
     {
-        "link": "https://i.ibb.co/6WLQfP8/DOD002.jpg"
+        "link": "https://i.ibb.co/nwBwqwz/DOD008.jpg"
     },
     {
-        "link": "https://i.ibb.co/QXg2GXc/DOD008.jpg"
+        "link": "https://i.ibb.co/zrc6zVw/DS-70.jpg"
     },
     {
-        "link": "https://i.ibb.co/0ZWZDpq/DS-70.jpg"
+        "link": "https://i.ibb.co/Pxf6XQt/DS-102.jpg"
     },
     {
-        "link": "https://i.ibb.co/cXQG5vV/DS-102.jpg"
+        "link": "https://i.ibb.co/cQJKwq7/DS-103.jpg"
     },
     {
-        "link": "https://i.ibb.co/jwmr5kb/DS-103.jpg"
+        "link": "https://i.ibb.co/Q7WPqyz/DS-105.jpg"
     },
     {
-        "link": "https://i.ibb.co/bHbG3RG/DS-105.jpg"
+        "link": "https://i.ibb.co/vkT17hG/ED005.jpg"
     },
     {
-        "link": "https://i.ibb.co/R3DrpL8/DS-106.jpg"
+        "link": "https://i.ibb.co/0V48K5z/DS-106.jpg"
     },
     {
-        "link": "https://i.ibb.co/8c1srZr/ED005.jpg"
+        "link": "https://i.ibb.co/cCGcprb/EDC006.jpg"
     },
     {
-        "link": "https://i.ibb.co/JHr37zq/EDC006.jpg"
+        "link": "https://i.ibb.co/F7X7RS0/EDC007.jpg"
     },
     {
-        "link": "https://i.ibb.co/7NvCx7X/EDC007.jpg"
+        "link": "https://i.ibb.co/7GW3C3x/EDC009.jpg"
     },
     {
-        "link": "https://i.ibb.co/LJkR4SK/EDC009.jpg"
+        "link": "https://i.ibb.co/wYnQFZf/EDC010.jpg"
     },
     {
-        "link": "https://i.ibb.co/mv31HHg/EDC010.jpg"
+        "link": "https://i.ibb.co/nRx5YWy/EDT001.jpg"
     },
     {
-        "link": "https://i.ibb.co/H7RKsGR/EDT001.jpg"
+        "link": "https://i.ibb.co/hWGk1WQ/EDC016.jpg"
     },
     {
-        "link": "https://i.ibb.co/pzq6vLd/EDC016.jpg"
+        "link": "https://i.ibb.co/rGzVQmq/EDT002.jpg"
     },
     {
-        "link": "https://i.ibb.co/1GjWG5p/EDT002.jpg"
+        "link": "https://i.ibb.co/9cx78zT/EDT003.jpg"
     },
     {
-        "link": "https://i.ibb.co/vv0K3BT/EDT003.jpg"
+        "link": "https://i.ibb.co/cgRZPrr/EDT004.jpg"
     },
     {
-        "link": "https://i.ibb.co/GptWGs7/EDT004.jpg"
+        "link": "https://i.ibb.co/3SQhCn8/EDT006.jpg"
     },
     {
-        "link": "https://i.ibb.co/PrH3VzC/EDT006.jpg"
+        "link": "https://i.ibb.co/c3hTB8n/EDT007.jpg"
     },
     {
-        "link": "https://i.ibb.co/RSxpJ77/EDT007.jpg"
+        "link": "https://i.ibb.co/b2CZ2sB/GDO001.jpg"
     },
     {
-        "link": "https://i.ibb.co/TcH4PbL/G025.jpg"
+        "link": "https://i.ibb.co/chYTMMY/G025.jpg"
     },
     {
-        "link": "https://i.ibb.co/DDfnxgC/GDO001.jpg"
+        "link": "https://i.ibb.co/xg45qbc/GDO005.jpg"
     },
     {
-        "link": "https://i.ibb.co/Fm53wPT/GDO005.jpg"
+        "link": "https://i.ibb.co/Xz98vc7/GDO007.jpg"
     },
     {
-        "link": "https://i.ibb.co/c1fHbx0/GDO007.jpg"
+        "link": "https://i.ibb.co/mS77mFm/GDO008.jpg"
     },
     {
-        "link": "https://i.ibb.co/D9kWFhr/GDO008.jpg"
+        "link": "https://i.ibb.co/56NQbNv/GDO09.jpg"
     },
     {
-        "link": "https://i.ibb.co/Q9rkJgc/GDO09.jpg"
+        "link": "https://i.ibb.co/M79Q81r/GDO010.jpg"
     },
     {
-        "link": "https://i.ibb.co/s6v2SD3/GDO010.jpg"
+        "link": "https://i.ibb.co/Gdp5sS7/GDO011.jpg"
     },
     {
-        "link": "https://i.ibb.co/rt5tG6s/GDO011.jpg"
+        "link": "https://i.ibb.co/KyHxZJm/GDO014.jpg"
     },
     {
-        "link": "https://i.ibb.co/n1Rh9NN/GDO014.jpg"
+        "link": "https://i.ibb.co/yy5PQkh/GDO018.jpg"
     },
     {
-        "link": "https://i.ibb.co/tMZ99Xy/GDO018.jpg"
+        "link": "https://i.ibb.co/YpXD65F/GDO019.jpg"
     },
     {
-        "link": "https://i.ibb.co/jv9M2v0/GDO019.jpg"
+        "link": "https://i.ibb.co/NmBQHPP/GDO020.jpg"
     },
     {
-        "link": "https://i.ibb.co/0j2svrt/GDO020.jpg"
+        "link": "https://i.ibb.co/NV6pcJG/GDO022.jpg"
     },
     {
-        "link": "https://i.ibb.co/1d9mN10/GDO022.jpg"
+        "link": "https://i.ibb.co/pfQWBrZ/GEL004.jpg"
     },
     {
-        "link": "https://i.ibb.co/gwxr99V/GEL004.jpg"
+        "link": "https://i.ibb.co/gy71Cz2/GEL005.jpg"
     },
     {
-        "link": "https://i.ibb.co/pnPN7fp/GEL005.jpg"
+        "link": "https://i.ibb.co/Snk4dXV/GEL011.jpg"
     },
     {
-        "link": "https://i.ibb.co/7jB6gkk/GEL011.jpg"
+        "link": "https://i.ibb.co/tJWHC9S/GEL013.jpg"
     },
     {
-        "link": "https://i.ibb.co/ZKRppm6/GEL013.jpg"
+        "link": "https://i.ibb.co/dLDFhMM/GEL015.jpg"
     },
     {
-        "link": "https://i.ibb.co/Lk5M9Nw/GEL015.jpg"
+        "link": "https://i.ibb.co/3Wj6hnD/GEL020.jpg"
     },
     {
-        "link": "https://i.ibb.co/47nddvw/GEL020.jpg"
+        "link": "https://i.ibb.co/3BJMGry/GEL027.jpg"
     },
     {
-        "link": "https://i.ibb.co/gDdPVYh/GEL027.jpg"
+        "link": "https://i.ibb.co/wN7RbVJ/HUI001.jpg"
     },
     {
-        "link": "https://i.ibb.co/z47p3HL/GEL028.jpg"
+        "link": "https://i.ibb.co/9wdKN8H/GEL028.jpg"
     },
     {
-        "link": "https://i.ibb.co/VxKngTs/HUI001.jpg"
+        "link": "https://i.ibb.co/9TygJFV/HUI003.jpg"
     },
     {
-        "link": "https://i.ibb.co/b7xGGXD/HUI003.jpg"
+        "link": "https://i.ibb.co/23KKfs5/HUI004.jpg"
     },
     {
-        "link": "https://i.ibb.co/Kys6Pzx/HUI004.jpg"
+        "link": "https://i.ibb.co/n0sMvZ6/HUI005.jpg"
     },
     {
-        "link": "https://i.ibb.co/JxPJPcB/HUI005.jpg"
+        "link": "https://i.ibb.co/2YgHVfv/HUI010.jpg"
     },
     {
-        "link": "https://i.ibb.co/rM9h0h7/HUI010.jpg"
+        "link": "https://i.ibb.co/zm47Hbt/LAI-001.jpg"
     },
     {
-        "link": "https://i.ibb.co/9pZDMKw/LAI-001.jpg"
+        "link": "https://i.ibb.co/bzP64Q7/LAI-002.jpg"
     },
     {
-        "link": "https://i.ibb.co/qgm6s6S/LAI-002.jpg"
+        "link": "https://i.ibb.co/7Qd00nV/LAI-004.jpg"
     },
     {
-        "link": "https://i.ibb.co/r2HX40c/LAI-004.jpg"
+        "link": "https://i.ibb.co/mBZYyGm/LAI-005.jpg"
     },
     {
-        "link": "https://i.ibb.co/VqJsN5d/LAI-005.jpg"
+        "link": "https://i.ibb.co/kK6xZXG/LAI-008.jpg"
     },
     {
-        "link": "https://i.ibb.co/JrSZbsF/LAI-008.jpg"
+        "link": "https://i.ibb.co/tcxjTZb/LAI-009.jpg"
     },
     {
-        "link": "https://i.ibb.co/YLdcPcz/LAI-009.jpg"
+        "link": "https://i.ibb.co/N16tyTF/LAI-011.jpg"
     },
     {
-        "link": "https://i.ibb.co/nk6KB7P/LAI-011.jpg"
+        "link": "https://i.ibb.co/WPxpf1B/LAI-012.jpg"
     },
     {
-        "link": "https://i.ibb.co/9NT2wWG/LAI-012.jpg"
+        "link": "https://i.ibb.co/yqf0B7z/LAI-013.jpg"
     },
     {
-        "link": "https://i.ibb.co/nMp5HxJ/LAI-013.jpg"
+        "link": "https://i.ibb.co/whfHxnm/LAI-014.jpg"
     },
     {
-        "link": "https://i.ibb.co/SsvvSy3/LAI-014.jpg"
+        "link": "https://i.ibb.co/qNvNVXb/LAI-017.jpg"
     },
     {
-        "link": "https://i.ibb.co/RpMYzdC/LAI-017.jpg"
+        "link": "https://i.ibb.co/gmN9gsP/LAI-018.jpg"
     },
     {
-        "link": "https://i.ibb.co/5XQn749/LAI-018.jpg"
+        "link": "https://i.ibb.co/YbhLJLQ/LAI024.jpg"
     },
     {
-        "link": "https://i.ibb.co/7ytwbmP/LAI024.jpg"
+        "link": "https://i.ibb.co/SymhZsF/LAI028.jpg"
     },
     {
-        "link": "https://i.ibb.co/30j0CkD/LAI028.jpg"
+        "link": "https://i.ibb.co/rk8xxQg/LAI036.jpg"
     },
     {
-        "link": "https://i.ibb.co/GHrnNSP/LAI036.jpg"
+        "link": "https://i.ibb.co/sFBBKgn/LAI039.jpg"
     },
     {
-        "link": "https://i.ibb.co/fq51vgN/LAI039.jpg"
+        "link": "https://i.ibb.co/hWdNg0M/LAI043.jpg"
     },
     {
-        "link": "https://i.ibb.co/ncctrvS/LAI043.jpg"
+        "link": "https://i.ibb.co/FWH9Mp6/LAI044.jpg"
     },
     {
-        "link": "https://i.ibb.co/X2QYv0z/LAI044.jpg"
+        "link": "https://i.ibb.co/tD9DRtf/LAIT-009.jpg"
     },
     {
-        "link": "https://i.ibb.co/C83HLx2/LAIT-009.jpg"
+        "link": "https://i.ibb.co/prj7MW6/LIP002.jpg"
     },
     {
-        "link": "https://i.ibb.co/8mtL8sz/LIP002.jpg"
+        "link": "https://i.ibb.co/b18kgQN/LIP004.jpg"
     },
     {
-        "link": "https://i.ibb.co/S3rx72N/LIP004.jpg"
+        "link": "https://i.ibb.co/KLX4vYc/LIP007.jpg"
     },
     {
-        "link": "https://i.ibb.co/Fq3JmNL/LIP007.jpg"
+        "link": "https://i.ibb.co/w6bxdSN/LIP010.jpg"
     },
     {
-        "link": "https://i.ibb.co/f0dXXgJ/LIP010.jpg"
+        "link": "https://i.ibb.co/G2Ls2Dk/LIP011.jpg"
     },
     {
-        "link": "https://i.ibb.co/Pg6rqHQ/LIP011.jpg"
+        "link": "https://i.ibb.co/ftGfm6p/LIP012.jpg"
     },
     {
-        "link": "https://i.ibb.co/4SmDs7m/LIP012.jpg"
+        "link": "https://i.ibb.co/X39VNTp/LOT001.jpg"
     },
     {
-        "link": "https://i.ibb.co/7knS736/LOT001.jpg"
+        "link": "https://i.ibb.co/9Y3sdPD/MAS001.jpg"
     },
     {
-        "link": "https://i.ibb.co/x5B2y7F/MSK001.jpg"
+        "link": "https://i.ibb.co/CbWWnN4/MSK001.jpg"
     },
     {
-        "link": "https://i.ibb.co/qWC2n2v/MAS001.jpg"
+        "link": "https://i.ibb.co/nftkLcG/MSK002.jpg"
     },
     {
-        "link": "https://i.ibb.co/Px8cVnj/MSK002.jpg"
+        "link": "https://i.ibb.co/JBdB8G9/MSK003.jpg"
     },
     {
-        "link": "https://i.ibb.co/YB5zXfK/MSK003.jpg"
+        "link": "https://i.ibb.co/XXdxRNn/ODC018.jpg"
     },
     {
-        "link": "https://i.ibb.co/V98LNHz/ODC018.jpg"
+        "link": "https://i.ibb.co/fdKGqd8/PAR017.jpg"
     },
     {
-        "link": "https://i.ibb.co/vkhN3PN/PAR017.jpg"
+        "link": "https://i.ibb.co/MD8XHR0/PAR020.jpg"
     },
     {
-        "link": "https://i.ibb.co/jgM9tZ3/PAR020.jpg"
+        "link": "https://i.ibb.co/gTJKrzd/PAR026.jpg"
     },
     {
-        "link": "https://i.ibb.co/Nj0hgYT/PAR026.jpg"
+        "link": "https://i.ibb.co/qMV3Syd/PAR028.jpg"
     },
     {
-        "link": "https://i.ibb.co/XFYJDSL/PAR028.jpg"
+        "link": "https://i.ibb.co/YZtxtyG/PAR031.jpg"
     },
     {
-        "link": "https://i.ibb.co/7JmXpKh/PAR031.jpg"
+        "link": "https://i.ibb.co/Rp2mz2k/PAR034.jpg"
     },
     {
-        "link": "https://i.ibb.co/5RjxMt5/PAR034.jpg"
+        "link": "https://i.ibb.co/J338hsn/POM001.jpg"
     },
     {
-        "link": "https://i.ibb.co/KNvQHSz/POM001.jpg"
+        "link": "https://i.ibb.co/bW6RD0H/POM002.jpg"
     },
     {
-        "link": "https://i.ibb.co/gM0BQ6Q/POM002.jpg"
+        "link": "https://i.ibb.co/wYP4RP4/POM003.jpg"
     },
     {
-        "link": "https://i.ibb.co/GkHm3yN/POM003.jpg"
+        "link": "https://i.ibb.co/9Zv2n46/POM006.jpg"
     },
     {
-        "link": "https://i.ibb.co/5BtQfXN/POM006.jpg"
+        "link": "https://i.ibb.co/Vvw0Hjg/POM007.jpg"
     },
     {
-        "link": "https://i.ibb.co/L0H9yg8/POM007.jpg"
+        "link": "https://i.ibb.co/PDdhZFf/POM008.jpg"
     },
     {
-        "link": "https://i.ibb.co/G76wZFZ/POM008.jpg"
+        "link": "https://i.ibb.co/37Bm9S1/POM010.jpg"
     },
     {
-        "link": "https://i.ibb.co/9pMqYb7/POM010.jpg"
+        "link": "https://i.ibb.co/LhNh2w1/SA023.jpg"
     },
     {
-        "link": "https://i.ibb.co/qjRYXRH/SA023.jpg"
+        "link": "https://i.ibb.co/ggp6kT9/SAV-001.jpg"
     },
     {
-        "link": "https://i.ibb.co/6H5GRvn/SAV-001.jpg"
+        "link": "https://i.ibb.co/RTyR4w8/SAV011.jpg"
     },
     {
-        "link": "https://i.ibb.co/SrBBdXv/SAV011.jpg"
+        "link": "https://i.ibb.co/yszbTY3/SAV11.jpg"
     },
     {
-        "link": "https://i.ibb.co/X5xf0cX/SAV11.jpg"
+        "link": "https://i.ibb.co/GMX4Ytv/SAV012.jpg"
     },
     {
-        "link": "https://i.ibb.co/fkVQz6R/SAV12.jpg"
+        "link": "https://i.ibb.co/2qsc4Wg/SAV12.jpg"
     },
     {
-        "link": "https://i.ibb.co/T0tpv9j/SAV012.jpg"
+        "link": "https://i.ibb.co/4Wc8tfV/SAV15.jpg"
     },
     {
-        "link": "https://i.ibb.co/nnCpW2Q/SAV15.jpg"
+        "link": "https://i.ibb.co/gMchsD5/SAV017.jpg"
     },
     {
-        "link": "https://i.ibb.co/dMykLKL/SAV017.jpg"
+        "link": "https://i.ibb.co/LgLj4N9/SAV027.jpg"
     },
     {
-        "link": "https://i.ibb.co/F30LMYr/SAV030.jpg"
+        "link": "https://i.ibb.co/GcH2d0q/SAV030.jpg"
     },
     {
-        "link": "https://i.ibb.co/MSRTJrm/SAV027.jpg"
+        "link": "https://i.ibb.co/7SvtbjW/SAV031.jpg"
     },
     {
-        "link": "https://i.ibb.co/XVKsR6K/SAV031.jpg"
+        "link": "https://i.ibb.co/pvbDpYz/SAV034.jpg"
     },
     {
-        "link": "https://i.ibb.co/cN6VqVr/SAV034.jpg"
+        "link": "https://i.ibb.co/SsCcK6Q/SAV036.jpg"
     },
     {
-        "link": "https://i.ibb.co/C0WX2td/SAV036.jpg"
+        "link": "https://i.ibb.co/1T7CGNx/SAV037.jpg"
     },
     {
-        "link": "https://i.ibb.co/jDnSFLN/SAV037.jpg"
+        "link": "https://i.ibb.co/DffPhW2/SAV040.jpg"
     },
     {
-        "link": "https://i.ibb.co/Sx8d6QS/SAV040.jpg"
+        "link": "https://i.ibb.co/9tPM86s/SAV042.jpg"
     },
     {
-        "link": "https://i.ibb.co/Y2mfnpg/SAV042.jpg"
+        "link": "https://i.ibb.co/7GDN6S3/SHA002.jpg"
     },
     {
-        "link": "https://i.ibb.co/y5rHGbK/SHA002.jpg"
+        "link": "https://i.ibb.co/YPmjNN0/SHA005.jpg"
     },
     {
-        "link": "https://i.ibb.co/YkxMDXK/SHA005.jpg"
+        "link": "https://i.ibb.co/yRx3jns/SHA006.jpg"
     },
     {
-        "link": "https://i.ibb.co/zXM9CGS/SHA006.jpg"
+        "link": "https://i.ibb.co/4d558qN/SHA007.jpg"
     },
     {
-        "link": "https://i.ibb.co/jgtVpBw/SHA007.jpg"
+        "link": "https://i.ibb.co/1X0cBR2/SHA008.jpg"
     },
     {
-        "link": "https://i.ibb.co/gJPSy4k/SHA008.jpg"
+        "link": "https://i.ibb.co/C6hZYwF/SPA001.jpg"
     },
     {
-        "link": "https://i.ibb.co/rtdSKGN/SPA001.jpg"
+        "link": "https://i.ibb.co/fY8SXYN/SPL001.jpg"
     },
     {
-        "link": "https://i.ibb.co/qWtRPZF/SPR003.jpg"
+        "link": "https://i.ibb.co/t8CP3DM/SPR003.jpg"
     },
     {
-        "link": "https://i.ibb.co/JKKbPgx/SPL001.jpg"
+        "link": "https://i.ibb.co/3MR3n0d/SPR004.jpg"
     },
     {
-        "link": "https://i.ibb.co/5WzdgRL/SPR004.jpg"
+        "link": "https://i.ibb.co/0VK0WhK/SRM005.jpg"
     },
     {
-        "link": "https://i.ibb.co/kcnCq6K/SRM005.jpg"
+        "link": "https://i.ibb.co/vQmfQmy/TAL001.jpg"
     },
     {
-        "link": "https://i.ibb.co/bvFspFH/TAL001.jpg"
+        "link": "https://i.ibb.co/LgwSd90/TAL011.jpg"
     },
     {
-        "link": "https://i.ibb.co/MN3B0vz/TAL011.jpg"
+        "link": "https://i.ibb.co/WVJZcpr/TALC002.jpg"
     },
     {
-        "link": "https://i.ibb.co/fDzCGc0/TALC003.jpg"
+        "link": "https://i.ibb.co/Mkfc5S9/TALC003.jpg"
     },
     {
-        "link": "https://i.ibb.co/R7FYC7z/TALC002.jpg"
+        "link": "https://i.ibb.co/X4P38xk/TALC005.jpg"
     },
     {
-        "link": "https://i.ibb.co/c6tjt7F/TALC005.jpg"
+        "link": "https://i.ibb.co/cNJ1wZ5/VR003.jpg"
     },
     {
-        "link": "https://i.ibb.co/98135w6/VR003.jpg"
+        "link": "https://i.ibb.co/X7p1CGg/VR004.jpg"
     },
     {
-        "link": "https://i.ibb.co/mb5z13m/VR004.jpg"
+        "link": "https://i.ibb.co/QQcDGmg/BAU005.jpg"
     }
 ]
 
 fs.readFile(productsFile, 'utf8', (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  try {
-    const jsonData = JSON.parse(data);
-    for (const item of jsonData) {
-      for (const cosmetic of cosmetics) {
-        const extractedValue = extractValueFromURL(cosmetic.link);
-
-        if (item.ref === extractedValue) {
-          // Create a new document in the "products" collection in Firestore
-          const productData = {
-            ref: item.ref,
-            name: item.name,
-            quantity: item.quantity,
-            category: "cosmetics",
-            image: cosmetic.link
-          };
-
-          db.collection('products')
-            .add(productData)
-            .then((docRef) => {
-              console.log('Document written with ID:', docRef.id);
-            })
-            .catch((error) => {
-              console.error('Error adding document:', error);
-            });
-        }
-      }
+    if (err) {
+        console.error(err);
+        return;
     }
-  } catch (jsonError) {
-    console.error('Error parsing JSON:', jsonError);
-  }
+    try {
+        const jsonData = JSON.parse(data);
+        for (const item of jsonData) {
+            for (const cosmetic of cosmetics) {
+                const extractedValue = extractValueFromURL(cosmetic.link);
+
+                if (item.ref === extractedValue) {
+                    // Create a new document in the "products" collection in Firestore
+                    const productData = {
+                        ref: item.ref,
+                        name: item.name,
+                        quantity: 100000,
+                        category: "cosmetique",
+                        image: cosmetic.link,
+                        price: 10
+                    };
+
+                    db.collection('products')
+                        .add(productData)
+                        .then((docRef) => {
+                            console.log('Document written with ID:', docRef.id);
+                        })
+                        .catch((error) => {
+                            console.error('Error adding document:', error);
+                        });
+                }
+            }
+        }
+    } catch (jsonError) {
+        console.error('Error parsing JSON:', jsonError);
+    }
 });
 
 function extractValueFromURL(url) {
-  const startIndex = url.lastIndexOf('/') + 1;
-  const endIndex = url.lastIndexOf('.jpg');
+    const startIndex = url.lastIndexOf('/') + 1;
+    const endIndex = url.lastIndexOf('.jpg');
 
-  if (startIndex !== -1 && endIndex !== -1) {
-    return url.substring(startIndex, endIndex);
-  } else {
-    return null;
-  }
+    if (startIndex !== -1 && endIndex !== -1) {
+        return url.substring(startIndex, endIndex);
+    } else {
+        return null;
+    }
 }

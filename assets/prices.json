@@ -1,0 +1,2894 @@
+[
+  {
+    "ref": "LAIˍ011",
+    "price": 1650
+  },
+  {
+    "ref": "LAI028",
+    "price": 1000
+  },
+  {
+    "ref": "LAIˍ010",
+    "price": 1150
+  },
+  {
+    "ref": "LAI048",
+    "price": 1150
+  },
+  {
+    "ref": "LAI049",
+    "price": 1150
+  },
+  {
+    "ref": "LAI050",
+    "price": 1150
+  },
+  {
+    "ref": "LAIˍ009",
+    "price": 750
+  },
+  {
+    "ref": "LAI047",
+    "price": 750
+  },
+  {
+    "ref": "LAI046",
+    "price": 750
+  },
+  {
+    "ref": "CRE018",
+    "price": 900
+  },
+  {
+    "ref": "CRE035",
+    "price": 950
+  },
+  {
+    "ref": "POM012",
+    "price": 850
+  },
+  {
+    "ref": "TALC003",
+    "price": 1200
+  },
+  {
+    "ref": "LAIˍ008",
+    "price": 450
+  },
+  {
+    "ref": "SHA 002",
+    "price": 1150
+  },
+  {
+    "ref": "SHA001",
+    "price": 550
+  },
+  {
+    "ref": "TALC002",
+    "price": 500
+  },
+  {
+    "ref": "POM002",
+    "price": 750
+  },
+  {
+    "ref": "GDO022",
+    "price": 1950
+  },
+  {
+    "ref": "GDO005",
+    "price": 2750
+  },
+  {
+    "ref": "GEL021",
+    "price": 1250
+  },
+  {
+    "ref": "SA023",
+    "price": 1000
+  },
+  {
+    "ref": "LAI027",
+    "price": 3750
+  },
+  {
+    "ref": "LAI026",
+    "price": 2450
+  },
+  {
+    "ref": "CRE014",
+    "price": 3250
+  },
+  {
+    "ref": "SRM002",
+    "price": 1350
+  },
+  {
+    "ref": "SRM004",
+    "price": 1750
+  },
+  {
+    "ref": "LAI031",
+    "price": 3750
+  },
+  {
+    "ref": "LAI030",
+    "price": 2450
+  },
+  {
+    "ref": "SRM003",
+    "price": 1650
+  },
+  {
+    "ref": "CRE028",
+    "price": 4250
+  },
+  {
+    "ref": "CRE027",
+    "price": 2200
+  },
+  {
+    "ref": "GDO006",
+    "price": 1950
+  },
+  {
+    "ref": "SAVˍ003",
+    "price": 800
+  },
+  {
+    "ref": "GDO028",
+    "price": 1150
+  },
+  {
+    "ref": "LAIˍ005",
+    "price": 1500
+  },
+  {
+    "ref": "CR003",
+    "price": 500
+  },
+  {
+    "ref": "CR001",
+    "price": 800
+  },
+  {
+    "ref": "HUI005",
+    "price": 700
+  },
+  {
+    "ref": "GDO007",
+    "price": 1950
+  },
+  {
+    "ref": "GDO027",
+    "price": 1150
+  },
+  {
+    "ref": "SAVˍ004",
+    "price": 800
+  },
+  {
+    "ref": "LAIˍ006",
+    "price": 1500
+  },
+  {
+    "ref": "CR004",
+    "price": 500
+  },
+  {
+    "ref": "CR002",
+    "price": 800
+  },
+  {
+    "ref": "HUI006",
+    "price": 750
+  },
+  {
+    "ref": "LAIˍ018",
+    "price": 450
+  },
+  {
+    "ref": "LAIˍ012",
+    "price": 450
+  },
+  {
+    "ref": "LAIˍ013",
+    "price": 450
+  },
+  {
+    "ref": "CRE025",
+    "price": 1350
+  },
+  {
+    "ref": "CRE026",
+    "price": 850
+  },
+  {
+    "ref": "POM009",
+    "price": 1000
+  },
+  {
+    "ref": "POM011",
+    "price": 450
+  },
+  {
+    "ref": "GEL015",
+    "price": 350
+  },
+  {
+    "ref": "GEL001",
+    "price": 350
+  },
+  {
+    "ref": "GEL002",
+    "price": 350
+  },
+  {
+    "ref": "POM005",
+    "price": 600
+  },
+  {
+    "ref": "POM008",
+    "price": 600
+  },
+  {
+    "ref": "GEL016",
+    "price": 400
+  },
+  {
+    "ref": "GEL017",
+    "price": 500
+  },
+  {
+    "ref": "GEL027",
+    "price": 1350
+  },
+  {
+    "ref": "GEL011",
+    "price": 850
+  },
+  {
+    "ref": "GEL028",
+    "price": 1250
+  },
+  {
+    "ref": "SPR003",
+    "price": 3000
+  },
+  {
+    "ref": "SAV019",
+    "price": 750
+  },
+  {
+    "ref": "CRE019",
+    "price": 1100
+  },
+  {
+    "ref": "GEL020",
+    "price": 650
+  },
+  {
+    "ref": "SAV15",
+    "price": 975
+  },
+  {
+    "ref": "BAU005",
+    "price": 650
+  },
+  {
+    "ref": "BAU006",
+    "price": 750
+  },
+  {
+    "ref": "BAU007",
+    "price": 750
+  },
+  {
+    "ref": "BAU008",
+    "price": 750
+  },
+  {
+    "ref": "BAU009",
+    "price": 750
+  },
+  {
+    "ref": "BAU002",
+    "price": 1150
+  },
+  {
+    "ref": "CR008",
+    "price": 650
+  },
+  {
+    "ref": "DEF002",
+    "price": 575
+  },
+  {
+    "ref": "DEF005",
+    "price": 650
+  },
+  {
+    "ref": "DEF004",
+    "price": 650
+  },
+  {
+    "ref": "DEF007",
+    "price": 650
+  },
+  {
+    "ref": "GEL025",
+    "price": 1100
+  },
+  {
+    "ref": "GEL004",
+    "price": 650
+  },
+  {
+    "ref": "GEL005",
+    "price": 1400
+  },
+  {
+    "ref": "HUI004",
+    "price": 800
+  },
+  {
+    "ref": "HUI001",
+    "price": 1800
+  },
+  {
+    "ref": "GDO025",
+    "price": 1150
+  },
+  {
+    "ref": "GDO026",
+    "price": 1150
+  },
+  {
+    "ref": "CR009",
+    "price": 650
+  },
+  {
+    "ref": "LAI029",
+    "price": 1200
+  },
+  {
+    "ref": "CR010",
+    "price": 650
+  },
+  {
+    "ref": "LAI045",
+    "price": 1100
+  },
+  {
+    "ref": "LAI051",
+    "price": 700
+  },
+  {
+    "ref": "LAI052",
+    "price": 700
+  },
+  {
+    "ref": "LAI011",
+    "price": 1850
+  },
+  {
+    "ref": "EDC004",
+    "price": 2950
+  },
+  {
+    "ref": "ST007",
+    "price": 55000
+  },
+  {
+    "ref": "ST005",
+    "price": 85000
+  },
+  {
+    "ref": "EYE001",
+    "price": 8000
+  },
+  {
+    "ref": "MAS001",
+    "price": 1800
+  },
+  {
+    "ref": "MAC006",
+    "price": 2750
+  },
+  {
+    "ref": "VR003",
+    "price": 8000
+  },
+  {
+    "ref": "VR004",
+    "price": 8000
+  },
+  {
+    "ref": "LIP008",
+    "price": 10800
+  },
+  {
+    "ref": "LIP012",
+    "price": 12000
+  },
+  {
+    "ref": "LIP007",
+    "price": 9600
+  },
+  {
+    "ref": "LIP009",
+    "price": 10800
+  },
+  {
+    "ref": "CRE001",
+    "price": 11000
+  },
+  {
+    "ref": "CRE002",
+    "price": 11000
+  },
+  {
+    "ref": "LIP011",
+    "price": 13000
+  },
+  {
+    "ref": "LIP004",
+    "price": 5750
+  },
+  {
+    "ref": "LIP003",
+    "price": 5750
+  },
+  {
+    "ref": "FON004",
+    "price": 800
+  },
+  {
+    "ref": "LIP010",
+    "price": 5750
+  },
+  {
+    "ref": "LIP001",
+    "price": 5750
+  },
+  {
+    "ref": "LIP002",
+    "price": 5750
+  },
+  {
+    "ref": "LIP005",
+    "price": 5750
+  },
+  {
+    "ref": "BRS016",
+    "price": 700
+  },
+  {
+    "ref": "BRS015",
+    "price": 800
+  },
+  {
+    "ref": "RAZ003",
+    "price": 400
+  },
+  {
+    "ref": "RAZ004",
+    "price": 380
+  },
+  {
+    "ref": "CRE015",
+    "price": 1000
+  },
+  {
+    "ref": "CRE017",
+    "price": 700
+  },
+  {
+    "ref": "CRE016",
+    "price": 700
+  },
+  {
+    "ref": "GEL010",
+    "price": 750
+  },
+  {
+    "ref": "GEL009",
+    "price": 700
+  },
+  {
+    "ref": "GEL007",
+    "price": 650
+  },
+  {
+    "ref": "HUI003",
+    "price": 300
+  },
+  {
+    "ref": "BOI013",
+    "price": 3500
+  },
+  {
+    "ref": "MIR001",
+    "price": 800
+  },
+  {
+    "ref": "LAV003",
+    "price": 1000
+  },
+  {
+    "ref": "BOI022",
+    "price": 800
+  },
+  {
+    "ref": "ASS106",
+    "price": 950
+  },
+  {
+    "ref": "COT009",
+    "price": 150
+  },
+  {
+    "ref": "COT008",
+    "price": 600
+  },
+  {
+    "ref": "EDC009",
+    "price": 950
+  },
+  {
+    "ref": "LAI024",
+    "price": 800
+  },
+  {
+    "ref": "HUI010",
+    "price": 1250
+  },
+  {
+    "ref": "GDO019",
+    "price": 800
+  },
+  {
+    "ref": "TAL011",
+    "price": 700
+  },
+  {
+    "ref": "POM033",
+    "price": 550
+  },
+  {
+    "ref": "TALC005",
+    "price": 850
+  },
+  {
+    "ref": "EDC010",
+    "price": 850
+  },
+  {
+    "ref": "CHA031",
+    "price": 1400
+  },
+  {
+    "ref": "SAC014",
+    "price": 1250
+  },
+  {
+    "ref": "PAP004",
+    "price": 750
+  },
+  {
+    "ref": "TBL007",
+    "price": 2250
+  },
+  {
+    "ref": "TAB020",
+    "price": 2500
+  },
+  {
+    "ref": "CAD024",
+    "price": 1800
+  },
+  {
+    "ref": "TBL005",
+    "price": 1650
+  },
+  {
+    "ref": "TBL004",
+    "price": 2100
+  },
+  {
+    "ref": "CAD001",
+    "price": 1150
+  },
+  {
+    "ref": "TBL002",
+    "price": 950
+  },
+  {
+    "ref": "TBL003",
+    "price": 1200
+  },
+  {
+    "ref": "TBL006",
+    "price": 1950
+  },
+  {
+    "ref": "ENS001",
+    "price": 1800
+  },
+  {
+    "ref": "SET011",
+    "price": 3850
+  },
+  {
+    "ref": "POT004",
+    "price": 1950
+  },
+  {
+    "ref": "ST004",
+    "price": 2100
+  },
+  {
+    "ref": "CAD006",
+    "price": 1500
+  },
+  {
+    "ref": "ENS001",
+    "price": 1800
+  },
+  {
+    "ref": "SET011",
+    "price": 3850
+  },
+  {
+    "ref": "POT004",
+    "price": 1950
+  },
+  {
+    "ref": "CHA032",
+    "price": 3200
+  },
+  {
+    "ref": "CHA033",
+    "price": 2250
+  },
+  {
+    "ref": "CHA034",
+    "price": 2500
+  },
+  {
+    "ref": "CHA035",
+    "price": 2250
+  },
+  {
+    "ref": "CHA025",
+    "price": 3750
+  },
+  {
+    "ref": "CHA036",
+    "price": 5000
+  },
+  {
+    "ref": "CHA028",
+    "price": 6500
+  },
+  {
+    "ref": "TAB015",
+    "price": 2750
+  },
+  {
+    "ref": "TAB001",
+    "price": 1900
+  },
+  {
+    "ref": "PEL007",
+    "price": 1900
+  },
+  {
+    "ref": "DEP002",
+    "price": 750
+  },
+  {
+    "ref": "PAP009",
+    "price": 950
+  },
+  {
+    "ref": "TAB016",
+    "price": 4200
+  },
+  {
+    "ref": "CRN002",
+    "price": 250
+  },
+  {
+    "ref": "CRN001",
+    "price": 250
+  },
+  {
+    "ref": "MAC001",
+    "price": 750
+  },
+  {
+    "ref": "SET002",
+    "price": 650
+  },
+  {
+    "ref": "SET004",
+    "price": 650
+  },
+  {
+    "ref": "SET006",
+    "price": 750
+  },
+  {
+    "ref": "STK006",
+    "price": 1200
+  },
+  {
+    "ref": "STK005",
+    "price": 1100
+  },
+  {
+    "ref": "ROB001",
+    "price": 950
+  },
+  {
+    "ref": "TP003",
+    "price": 650
+  },
+  {
+    "ref": "SER003",
+    "price": 650
+  },
+  {
+    "ref": "EP007",
+    "price": 250
+  },
+  {
+    "ref": "EP009",
+    "price": 750
+  },
+  {
+    "ref": "GRA006",
+    "price": 650
+  },
+  {
+    "ref": "GRA008",
+    "price": 600
+  },
+  {
+    "ref": "GOB004",
+    "price": 700
+  },
+  {
+    "ref": "GOB005",
+    "price": 850
+  },
+  {
+    "ref": "BOI019",
+    "price": 4600
+  },
+  {
+    "ref": "BOI020",
+    "price": 2750
+  },
+  {
+    "ref": "BOI021",
+    "price": 4800
+  },
+  {
+    "ref": "BOI003",
+    "price": 2000
+  },
+  {
+    "ref": "TAP031",
+    "price": 1250
+  },
+  {
+    "ref": "GOB006",
+    "price": 1750
+  },
+  {
+    "ref": "TAP008",
+    "price": 2000
+  },
+  {
+    "ref": "EG009",
+    "price": 900
+  },
+  {
+    "ref": "PR001",
+    "price": 1450
+  },
+  {
+    "ref": "BOI017",
+    "price": 700
+  },
+  {
+    "ref": "BAG002",
+    "price": 900
+  },
+  {
+    "ref": "CUV002",
+    "price": 1000
+  },
+  {
+    "ref": "CUV001",
+    "price": 1250
+  },
+  {
+    "ref": "BOI012",
+    "price": 1500
+  },
+  {
+    "ref": "GAN002",
+    "price": 475
+  },
+  {
+    "ref": "PAN002",
+    "price": 900
+  },
+  {
+    "ref": "PAS003",
+    "price": 850
+  },
+  {
+    "ref": "TP010",
+    "price": 3750
+  },
+  {
+    "ref": "TP008",
+    "price": 1100
+  },
+  {
+    "ref": "TP007",
+    "price": 1400
+  },
+  {
+    "ref": "TP005",
+    "price": 750
+  },
+  {
+    "ref": "TP006",
+    "price": 3500
+  },
+  {
+    "ref": "PAP001",
+    "price": 850
+  },
+  {
+    "ref": "SAC013",
+    "price": 850
+  },
+  {
+    "ref": "SAC012",
+    "price": 750
+  },
+  {
+    "ref": "BRS014",
+    "price": 450
+  },
+  {
+    "ref": "PIN011",
+    "price": 800
+  },
+  {
+    "ref": "BRS010",
+    "price": 500
+  },
+  {
+    "ref": "BAG001",
+    "price": 700
+  },
+  {
+    "ref": "COR002",
+    "price": 500
+  },
+  {
+    "ref": "CHP001",
+    "price": 750
+  },
+  {
+    "ref": "COU007",
+    "price": 1100
+  },
+  {
+    "ref": "NAP001",
+    "price": 800
+  },
+  {
+    "ref": "SAC005",
+    "price": 750
+  },
+  {
+    "ref": "SAC022",
+    "price": 1650
+  },
+  {
+    "ref": "SAC014",
+    "price": 1000
+  },
+  {
+    "ref": "SAC021",
+    "price": 1100
+  },
+  {
+    "ref": "SAC020",
+    "price": 1150
+  },
+  {
+    "ref": "SAC018",
+    "price": 650
+  },
+  {
+    "ref": "SAC019",
+    "price": 550
+  },
+  {
+    "ref": "SAC001",
+    "price": 600
+  },
+  {
+    "ref": "CHI001",
+    "price": 650
+  },
+  {
+    "ref": "CEN002",
+    "price": 1450
+  },
+  {
+    "ref": "CEN003",
+    "price": 250
+  },
+  {
+    "ref": "BOT001",
+    "price": 900
+  },
+  {
+    "ref": "PRT001",
+    "price": 250
+  },
+  {
+    "ref": "BL009",
+    "price": 24000
+  },
+  {
+    "ref": "BAT001",
+    "price": 6900
+  },
+  {
+    "ref": "BAB029",
+    "price": 1650
+  },
+  {
+    "ref": "TEN006",
+    "price": 5500
+  },
+  {
+    "ref": "TEN005",
+    "price": 5000
+  },
+  {
+    "ref": "MAC005",
+    "price": 5750
+  },
+  {
+    "ref": "SEC003",
+    "price": 6500
+  },
+  {
+    "ref": "FER001",
+    "price": 6500
+  },
+  {
+    "ref": "FER006",
+    "price": 6500
+  },
+  {
+    "ref": "FER005",
+    "price": 9500
+  },
+  {
+    "ref": "CHA029",
+    "price": 5000
+  },
+  {
+    "ref": "AMP008",
+    "price": 500
+  },
+  {
+    "ref": "AMP006",
+    "price": 1500
+  },
+  {
+    "ref": "AMP007",
+    "price": 1000
+  },
+  {
+    "ref": "AMP004",
+    "price": 1600
+  },
+  {
+    "ref": "TOR001",
+    "price": 650
+  },
+  {
+    "ref": "TOR007",
+    "price": 1500
+  },
+  {
+    "ref": "TOR002",
+    "price": 1500
+  },
+  {
+    "ref": "AMP002",
+    "price": 500
+  },
+  {
+    "ref": "AMP003",
+    "price": 950
+  },
+  {
+    "ref": "TU001",
+    "price": 700
+  },
+  {
+    "ref": "DET001",
+    "price": 1200
+  },
+  {
+    "ref": "GAN005",
+    "price": 1200
+  },
+  {
+    "ref": "FIL002",
+    "price": 650
+  },
+  {
+    "ref": "FIL001",
+    "price": 2500
+  },
+  {
+    "ref": "STO002",
+    "price": 300
+  },
+  {
+    "ref": "SCO004",
+    "price": 1500
+  },
+  {
+    "ref": "SCO003",
+    "price": 750
+  },
+  {
+    "ref": "MOU007",
+    "price": 1000
+  },
+  {
+    "ref": "MOU010",
+    "price": 1000
+  },
+  {
+    "ref": "MOU003",
+    "price": 1350
+  },
+  {
+    "ref": "FLM001",
+    "price": 700
+  },
+  {
+    "ref": "GAZ003",
+    "price": 13500
+  },
+  {
+    "ref": "GAZ009",
+    "price": 11000
+  },
+  {
+    "ref": "GAZ006",
+    "price": 10500
+  },
+  {
+    "ref": "GAZ005",
+    "price": 11500
+  },
+  {
+    "ref": "CHE003",
+    "price": 3500
+  },
+  {
+    "ref": "CHE005",
+    "price": 5000
+  },
+  {
+    "ref": "CHE004",
+    "price": 5500
+  },
+  {
+    "ref": "POE006",
+    "price": 5500
+  },
+  {
+    "ref": "CAS001",
+    "price": 1450
+  },
+  {
+    "ref": "POE005",
+    "price": 4250
+  },
+  {
+    "ref": "FRI004",
+    "price": 2500
+  },
+  {
+    "ref": "FRI003",
+    "price": 4750
+  },
+  {
+    "ref": "POE004",
+    "price": 1250
+  },
+  {
+    "ref": "FRI006",
+    "price": 2750
+  },
+  {
+    "ref": "BL012",
+    "price": 7500
+  },
+  {
+    "ref": "MAR014",
+    "price": 55000
+  },
+  {
+    "ref": "ASS061",
+    "price": 800
+  },
+  {
+    "ref": "ASS071",
+    "price": 1250
+  },
+  {
+    "ref": "ASS085",
+    "price": 1350
+  },
+  {
+    "ref": "BOL019",
+    "price": 650
+  },
+  {
+    "ref": "ASS052",
+    "price": 450
+  },
+  {
+    "ref": "BOL013",
+    "price": 750
+  },
+  {
+    "ref": "BOL007",
+    "price": 380
+  },
+  {
+    "ref": "ASS078",
+    "price": 650
+  },
+  {
+    "ref": "ASS098",
+    "price": 750
+  },
+  {
+    "ref": "ASS112",
+    "price": 300
+  },
+  {
+    "ref": "BOL008",
+    "price": 850
+  },
+  {
+    "ref": "ASS097",
+    "price": 650
+  },
+  {
+    "ref": "PL017",
+    "price": 1500
+  },
+  {
+    "ref": "PL018",
+    "price": 1500
+  },
+  {
+    "ref": "PL019",
+    "price": 2100
+  },
+  {
+    "ref": "COU012",
+    "price": 1500
+  },
+  {
+    "ref": "COU013",
+    "price": 1500
+  },
+  {
+    "ref": "COU008",
+    "price": 850
+  },
+  {
+    "ref": "COU018",
+    "price": 1500
+  },
+  {
+    "ref": "SIZ005",
+    "price": 900
+  },
+  {
+    "ref": "COU002",
+    "price": 800
+  },
+  {
+    "ref": "FOU015",
+    "price": 1150
+  },
+  {
+    "ref": "CUI022",
+    "price": 2900
+  },
+  {
+    "ref": "CUI021",
+    "price": 3500
+  },
+  {
+    "ref": "FOU011",
+    "price": 3500
+  },
+  {
+    "ref": "COU02",
+    "price": 4075
+  },
+  {
+    "ref": "CUI020",
+    "price": 3100
+  },
+  {
+    "ref": "FOU010",
+    "price": 4500
+  },
+  {
+    "ref": "CUI017",
+    "price": 2750
+  },
+  {
+    "ref": "FOU008",
+    "price": 2750
+  },
+  {
+    "ref": "COU014",
+    "price": 3250
+  },
+  {
+    "ref": "CUI016",
+    "price": 2000
+  },
+  {
+    "ref": "COU006",
+    "price": 750
+  },
+  {
+    "ref": "CUI005",
+    "price": 700
+  },
+  {
+    "ref": "CUIˍ004",
+    "price": 2000
+  },
+  {
+    "ref": "CUI018",
+    "price": 1900
+  },
+  {
+    "ref": "COU015",
+    "price": 2500
+  },
+  {
+    "ref": "CUI019",
+    "price": 1400
+  },
+  {
+    "ref": "CUI023",
+    "price": 2300
+  },
+  {
+    "ref": "FOU012",
+    "price": 2300
+  },
+  {
+    "ref": "COU022",
+    "price": 3100
+  },
+  {
+    "ref": "CUI024",
+    "price": 1500
+  },
+  {
+    "ref": "CUI015",
+    "price": 600
+  },
+  {
+    "ref": "FOU004",
+    "price": 600
+  },
+  {
+    "ref": "COU005",
+    "price": 750
+  },
+  {
+    "ref": "CUI011",
+    "price": 400
+  },
+  {
+    "ref": "CUI010",
+    "price": 550
+  },
+  {
+    "ref": "FOU005",
+    "price": 600
+  },
+  {
+    "ref": "TEN004",
+    "price": 900
+  },
+  {
+    "ref": "PAR034",
+    "price": 650
+  },
+  {
+    "ref": "PAR031",
+    "price": 2100
+  },
+  {
+    "ref": "PAR020",
+    "price": 4450
+  },
+  {
+    "ref": "PAR016",
+    "price": 1850
+  },
+  {
+    "ref": "PAR014",
+    "price": 1850
+  },
+  {
+    "ref": "PAR026",
+    "price": 750
+  },
+  {
+    "ref": "PAR030",
+    "price": 1850
+  },
+  {
+    "ref": "PAR017",
+    "price": 3600
+  },
+  {
+    "ref": "PAR005",
+    "price": 1900
+  },
+  {
+    "ref": "PAR028",
+    "price": 550
+  },
+  {
+    "ref": "PAR006",
+    "price": 1900
+  },
+  {
+    "ref": "PAR027",
+    "price": 2100
+  },
+  {
+    "ref": "PAR050",
+    "price": 3750
+  },
+  {
+    "ref": "PAR021",
+    "price": 4250
+  },
+  {
+    "ref": "PAR018",
+    "price": 4100
+  },
+  {
+    "ref": "EDT002",
+    "price": 2000
+  },
+  {
+    "ref": "DOD004",
+    "price": 1400
+  },
+  {
+    "ref": "DOD069",
+    "price": 1400
+  },
+  {
+    "ref": "DEO020",
+    "price": 850
+  },
+  {
+    "ref": "GLY001",
+    "price": 400
+  },
+  {
+    "ref": "ANT002",
+    "price": 850
+  },
+  {
+    "ref": "GEL006",
+    "price": 1600
+  },
+  {
+    "ref": "DOD003",
+    "price": 1300
+  },
+  {
+    "ref": "DOD011",
+    "price": 1000
+  },
+  {
+    "ref": "PAR033",
+    "price": 12500
+  },
+  {
+    "ref": "DES006",
+    "price": 850
+  },
+  {
+    "ref": "ACR021",
+    "price": 850
+  },
+  {
+    "ref": "ACR020",
+    "price": 850
+  },
+  {
+    "ref": "SET012",
+    "price": 1000
+  },
+  {
+    "ref": "ANI011",
+    "price": 500
+  },
+  {
+    "ref": "ANI004",
+    "price": 1600
+  },
+  {
+    "ref": "STK002",
+    "price": 3000
+  },
+  {
+    "ref": "ANI020",
+    "price": 700
+  },
+  {
+    "ref": "ANI021",
+    "price": 1150
+  },
+  {
+    "ref": "ANI025",
+    "price": 500
+  },
+  {
+    "ref": "ANI028",
+    "price": 3750
+  },
+  {
+    "ref": "SAC024",
+    "price": 500
+  },
+  {
+    "ref": "ANI024",
+    "price": 1100
+  },
+  {
+    "ref": "SCO002",
+    "price": 650
+  },
+  {
+    "ref": "ANI029",
+    "price": 400
+  },
+  {
+    "ref": "ANI027",
+    "price": 450
+  },
+  {
+    "ref": "ANI015",
+    "price": 400
+  },
+  {
+    "ref": "ANI014",
+    "price": 400
+  },
+  {
+    "ref": "FOU013",
+    "price": 1000
+  },
+  {
+    "ref": "CUI025",
+    "price": 1000
+  },
+  {
+    "ref": "ANI018",
+    "price": 450
+  },
+  {
+    "ref": "ANI026",
+    "price": 2900
+  },
+  {
+    "ref": "MSK002",
+    "price": 1000
+  },
+  {
+    "ref": "SPA001",
+    "price": 1350
+  },
+  {
+    "ref": "SHA007",
+    "price": 1100
+  },
+  {
+    "ref": "SHA006",
+    "price": 1100
+  },
+  {
+    "ref": "CRE030",
+    "price": 1200
+  },
+  {
+    "ref": "CRE031",
+    "price": 1150
+  },
+  {
+    "ref": "SAV027",
+    "price": 800
+  },
+  {
+    "ref": "LAIˍ004",
+    "price": 1100
+  },
+  {
+    "ref": "GDO024",
+    "price": 1150
+  },
+  {
+    "ref": "LAI002",
+    "price": 1250
+  },
+  {
+    "ref": "LAIˍ001",
+    "price": 700
+  },
+  {
+    "ref": "GDO023",
+    "price": 1150
+  },
+  {
+    "ref": "SAV026",
+    "price": 800
+  },
+  {
+    "ref": "GDO011",
+    "price": 1850
+  },
+  {
+    "ref": "GDO001",
+    "price": 1100
+  },
+  {
+    "ref": "CRE009",
+    "price": 1600
+  },
+  {
+    "ref": "CRE008",
+    "price": 800
+  },
+  {
+    "ref": "SAV11",
+    "price": 950
+  },
+  {
+    "ref": "LAIˍ017",
+    "price": 750
+  },
+  {
+    "ref": "LOT001",
+    "price": 1100
+  },
+  {
+    "ref": "CR007",
+    "price": 1100
+  },
+  {
+    "ref": "CR012",
+    "price": 650
+  },
+  {
+    "ref": "CR006",
+    "price": 700
+  },
+  {
+    "ref": "POM 001",
+    "price": 650
+  },
+  {
+    "ref": "CR005",
+    "price": 395
+  },
+  {
+    "ref": "TAL001",
+    "price": 500
+  },
+  {
+    "ref": "SAV017",
+    "price": 1000
+  },
+  {
+    "ref": "SAVˍ002",
+    "price": 1050
+  },
+  {
+    "ref": "SAV16",
+    "price": 550
+  },
+  {
+    "ref": "MSK003",
+    "price": 1250
+  },
+  {
+    "ref": "GDO008",
+    "price": 1200
+  },
+  {
+    "ref": "GDO010",
+    "price": 2000
+  },
+  {
+    "ref": "GDO009",
+    "price": 1150
+  },
+  {
+    "ref": "CRE022",
+    "price": 750
+  },
+  {
+    "ref": "GDO020",
+    "price": 1450
+  },
+  {
+    "ref": "CRE010",
+    "price": 1300
+  },
+  {
+    "ref": "CRE023",
+    "price": 750
+  },
+  {
+    "ref": "SAV12",
+    "price": 850
+  },
+  {
+    "ref": "LAI040",
+    "price": 1100
+  },
+  {
+    "ref": "SAV022",
+    "price": 900
+  },
+  {
+    "ref": "LAI 044",
+    "price": 1200
+  },
+  {
+    "ref": "LAI 043",
+    "price": 1200
+  },
+  {
+    "ref": "CR011",
+    "price": 650
+  },
+  {
+    "ref": "LAI014",
+    "price": 450
+  },
+  {
+    "ref": "SAV012",
+    "price": 500
+  },
+  {
+    "ref": "SAV012",
+    "price": 500
+  },
+  {
+    "ref": "SAV040",
+    "price": 650
+  },
+  {
+    "ref": "SAV041",
+    "price": 1500
+  },
+  {
+    "ref": "SAV042",
+    "price": 1500
+  },
+  {
+    "ref": "SAV032",
+    "price": 1650
+  },
+  {
+    "ref": "SAV036",
+    "price": 1650
+  },
+  {
+    "ref": "SAV037",
+    "price": 1650
+  },
+  {
+    "ref": "SAV035",
+    "price": 1650
+  },
+  {
+    "ref": "SAV039",
+    "price": 1650
+  },
+  {
+    "ref": "SAV031",
+    "price": 1650
+  },
+  {
+    "ref": "SAV034",
+    "price": 1650
+  },
+  {
+    "ref": "SAV034",
+    "price": 1650
+  },
+  {
+    "ref": "SAV030",
+    "price": 1650
+  },
+  {
+    "ref": "SAV033",
+    "price": 1650
+  },
+  {
+    "ref": "DEF010",
+    "price": 850
+  },
+  {
+    "ref": "COT002",
+    "price": 700
+  },
+  {
+    "ref": "DIS005",
+    "price": 1500
+  },
+  {
+    "ref": "DIS003",
+    "price": 1500
+  },
+  {
+    "ref": "DIS004",
+    "price": 650
+  },
+  {
+    "ref": "DIS002",
+    "price": 300
+  },
+  {
+    "ref": "BDB001",
+    "price": 700
+  },
+  {
+    "ref": "BDB003",
+    "price": 300
+  },
+  {
+    "ref": "DEN002",
+    "price": 1250
+  },
+  {
+    "ref": "DEN001",
+    "price": 825
+  },
+  {
+    "ref": "DEN021",
+    "price": 800
+  },
+  {
+    "ref": "DEN024",
+    "price": 800
+  },
+  {
+    "ref": "BRS003",
+    "price": 650
+  },
+  {
+    "ref": "BRS021",
+    "price": 650
+  },
+  {
+    "ref": "LP001",
+    "price": 1500
+  },
+  {
+    "ref": "EDT001",
+    "price": 725
+  },
+  {
+    "ref": "EDC006",
+    "price": 675
+  },
+  {
+    "ref": "EDC005",
+    "price": 650
+  },
+  {
+    "ref": "EDC007",
+    "price": 650
+  },
+  {
+    "ref": "EDT007",
+    "price": 800
+  },
+  {
+    "ref": "EDT006",
+    "price": 750
+  },
+  {
+    "ref": "EDC016",
+    "price": 750
+  },
+  {
+    "ref": "SPL001",
+    "price": 1500
+  },
+  {
+    "ref": "EDC001",
+    "price": 1500
+  },
+  {
+    "ref": "EDC020",
+    "price": 2150
+  },
+  {
+    "ref": "EDC017",
+    "price": 2500
+  },
+  {
+    "ref": "EDC018",
+    "price": 2750
+  },
+  {
+    "ref": "EDC014",
+    "price": 2450
+  },
+  {
+    "ref": "EDC021",
+    "price": 2500
+  },
+  {
+    "ref": "EDC022",
+    "price": 2150
+  },
+  {
+    "ref": "EDC019",
+    "price": 2150
+  },
+  {
+    "ref": "EDC013",
+    "price": 2500
+  },
+  {
+    "ref": "SHA005",
+    "price": 1250
+  },
+  {
+    "ref": "BIB002",
+    "price": 1650
+  },
+  {
+    "ref": "BIB001",
+    "price": 1400
+  },
+  {
+    "ref": "DOS001",
+    "price": 900
+  },
+  {
+    "ref": "BIB004",
+    "price": 1650
+  },
+  {
+    "ref": "BON009",
+    "price": 350
+  },
+  {
+    "ref": "TAT002",
+    "price": 750
+  },
+  {
+    "ref": "CP001",
+    "price": 650
+  },
+  {
+    "ref": "BRS011",
+    "price": 750
+  },
+  {
+    "ref": "ENS005",
+    "price": 700
+  },
+  {
+    "ref": "THR001",
+    "price": 250
+  },
+  {
+    "ref": "ENS008",
+    "price": 1400
+  },
+  {
+    "ref": "CIL001",
+    "price": 1150
+  },
+  {
+    "ref": "TIT001",
+    "price": 650
+  },
+  {
+    "ref": "BON001",
+    "price": 350
+  },
+  {
+    "ref": "BON008",
+    "price": 650
+  },
+  {
+    "ref": "BON007",
+    "price": 650
+  },
+  {
+    "ref": "BON004",
+    "price": 350
+  },
+  {
+    "ref": "BON002",
+    "price": 400
+  },
+  {
+    "ref": "BON010",
+    "price": 1100
+  },
+  {
+    "ref": "ENS004",
+    "price": 1000
+  },
+  {
+    "ref": "ENS006",
+    "price": 950
+  },
+  {
+    "ref": "SIZ003",
+    "price": 1150
+  },
+  {
+    "ref": "CAD013",
+    "price": 850
+  },
+  {
+    "ref": "CAD011",
+    "price": 850
+  },
+  {
+    "ref": "CAD020",
+    "price": 1450
+  },
+  {
+    "ref": "CAD015",
+    "price": 850
+  },
+  {
+    "ref": "CAD014",
+    "price": 1250
+  },
+  {
+    "ref": "SAC011",
+    "price": 950
+  },
+  {
+    "ref": "SAC015",
+    "price": 1000
+  },
+  {
+    "ref": "SAC005",
+    "price": 750
+  },
+  {
+    "ref": "SAC023",
+    "price": 6000
+  },
+  {
+    "ref": "ENS005",
+    "price": 700
+  },
+  {
+    "ref": "CP003",
+    "price": 4500
+  },
+  {
+    "ref": "SIZ004",
+    "price": 250
+  },
+  {
+    "ref": "POR013",
+    "price": 250
+  },
+  {
+    "ref": "AG001",
+    "price": 300
+  },
+  {
+    "ref": "POR012",
+    "price": 150
+  },
+  {
+    "ref": "ALB001",
+    "price": 750
+  },
+  {
+    "ref": "ALB004",
+    "price": 900
+  },
+  {
+    "ref": "ALB003",
+    "price": 850
+  },
+  {
+    "ref": "CAD010",
+    "price": 1500
+  },
+  {
+    "ref": "CAD007",
+    "price": 650
+  },
+  {
+    "ref": "CAD016",
+    "price": 300
+  },
+  {
+    "ref": "POU008",
+    "price": 1500
+  },
+  {
+    "ref": "POU003",
+    "price": 1000
+  },
+  {
+    "ref": "CHA030",
+    "price": 300
+  },
+  {
+    "ref": "CHA003",
+    "price": 325
+  },
+  {
+    "ref": "GRA005",
+    "price": 450
+  },
+  {
+    "ref": "CON001",
+    "price": 500
+  },
+  {
+    "ref": "GRA007",
+    "price": 350
+  },
+  {
+    "ref": "PIN013",
+    "price": 850
+  },
+  {
+    "ref": "PIN010",
+    "price": 850
+  },
+  {
+    "ref": "PIN014",
+    "price": 850
+  },
+  {
+    "ref": "BAL008",
+    "price": 1250
+  },
+  {
+    "ref": "BAL007",
+    "price": 950
+  },
+  {
+    "ref": "BAL003",
+    "price": 600
+  },
+  {
+    "ref": "BAL005",
+    "price": 1100
+  },
+  {
+    "ref": "RAC003",
+    "price": 1200
+  },
+  {
+    "ref": "ALU001",
+    "price": 17500
+  },
+  {
+    "ref": "ALU002",
+    "price": 17500
+  },
+  {
+    "ref": "POR002",
+    "price": 700
+  },
+  {
+    "ref": "BRS018",
+    "price": 850
+  },
+  {
+    "ref": "BRS017",
+    "price": 850
+  },
+  {
+    "ref": "DEB002",
+    "price": 850
+  },
+  {
+    "ref": "POR001",
+    "price": 400
+  },
+  {
+    "ref": "MAC008",
+    "price": 1000
+  },
+  {
+    "ref": "DET002",
+    "price": 6500
+  },
+  {
+    "ref": "PRD008",
+    "price": 3500
+  },
+  {
+    "ref": "PRD007",
+    "price": 3000
+  },
+  {
+    "ref": "DES009",
+    "price": 5750
+  },
+  {
+    "ref": "SVL001",
+    "price": 750
+  },
+  {
+    "ref": "DES008",
+    "price": 600
+  },
+  {
+    "ref": "MCH001",
+    "price": 9750
+  },
+  {
+    "ref": "MCH002",
+    "price": 14000
+  },
+  {
+    "ref": "MCH003",
+    "price": 1200
+  },
+  {
+    "ref": "ENS007",
+    "price": 9700
+  },
+  {
+    "ref": "ENS002",
+    "price": 4200
+  },
+  {
+    "ref": "RAP002",
+    "price": 850
+  },
+  {
+    "ref": "TAP032",
+    "price": 850
+  },
+  {
+    "ref": "POB004",
+    "price": 950
+  },
+  {
+    "ref": "TAP026",
+    "price": 1750
+  },
+  {
+    "ref": "PAN010",
+    "price": 1500
+  },
+  {
+    "ref": "PAS005",
+    "price": 600
+  },
+  {
+    "ref": "PAN011",
+    "price": 2000
+  },
+  {
+    "ref": "BOI018",
+    "price": 2100
+  },
+  {
+    "ref": "PR002",
+    "price": 1000
+  },
+  {
+    "ref": "BOI004",
+    "price": 900
+  },
+  {
+    "ref": "TAP014",
+    "price": 450
+  },
+  {
+    "ref": "ASS102",
+    "price": 200
+  },
+  {
+    "ref": "ENT001",
+    "price": 350
+  },
+  {
+    "ref": "BO002",
+    "price": 250
+  },
+  {
+    "ref": "TAP010",
+    "price": 1000
+  },
+  {
+    "ref": "VER028",
+    "price": 550
+  },
+  {
+    "ref": "GOB003",
+    "price": 750
+  },
+  {
+    "ref": "MOS002",
+    "price": 6500
+  },
+  {
+    "ref": "TP004",
+    "price": 10000
+  },
+  {
+    "ref": "ST010",
+    "price": 2000
+  },
+  {
+    "ref": "RID039",
+    "price": 5500
+  },
+  {
+    "ref": "RID040",
+    "price": 5500
+  },
+  {
+    "ref": "DET003",
+    "price": 7000
+  },
+  {
+    "ref": "RID037",
+    "price": 5500
+  },
+  {
+    "ref": "RID035",
+    "price": 5500
+  },
+  {
+    "ref": "TRI034",
+    "price": 5500
+  },
+  {
+    "ref": "RID028",
+    "price": 6500
+  },
+  {
+    "ref": "RID033",
+    "price": 5500
+  },
+  {
+    "ref": "RID036",
+    "price": 7200
+  },
+  {
+    "ref": "AT002",
+    "price": 900
+  },
+  {
+    "ref": "RID016",
+    "price": 2500
+  },
+  {
+    "ref": "MOS003",
+    "price": 1900
+  },
+  {
+    "ref": "RID041",
+    "price": 1400
+  },
+  {
+    "ref": "COV003",
+    "price": 2250
+  },
+  {
+    "ref": "COV002",
+    "price": 2250
+  },
+  {
+    "ref": "BOJ001",
+    "price": 375
+  },
+  {
+    "ref": "BOJ005",
+    "price": 900
+  },
+  {
+    "ref": "BOJ009",
+    "price": 350
+  },
+  {
+    "ref": "BOJ007",
+    "price": 250
+  },
+  {
+    "ref": "BOJ008",
+    "price": 250
+  },
+  {
+    "ref": "VAS016",
+    "price": 1750
+  },
+  {
+    "ref": "SAC017",
+    "price": 850
+  },
+  {
+    "ref": "BOU002",
+    "price": 850
+  },
+  {
+    "ref": "DEC012",
+    "price": 300
+  },
+  {
+    "ref": "DEC013",
+    "price": 450
+  },
+  {
+    "ref": "DEC009",
+    "price": 400
+  },
+  {
+    "ref": "DEC010",
+    "price": 375
+  },
+  {
+    "ref": "BOI016",
+    "price": 850
+  },
+  {
+    "ref": "SEA016",
+    "price": 3200
+  },
+  {
+    "ref": "PO003",
+    "price": 1100
+  },
+  {
+    "ref": "DEC014",
+    "price": 2500
+  },
+  {
+    "ref": "PO005",
+    "price": 800
+  },
+  {
+    "ref": "VAS027",
+    "price": 1350
+  },
+  {
+    "ref": "FL010",
+    "price": 4750
+  },
+  {
+    "ref": "POT005",
+    "price": 850
+  },
+  {
+    "ref": "POT002",
+    "price": 2800
+  },
+  {
+    "ref": "PO004",
+    "price": 1000
+  },
+  {
+    "ref": "MON005",
+    "price": 3150
+  },
+  {
+    "ref": "MON010",
+    "price": 6750
+  },
+  {
+    "ref": "ALR001",
+    "price": 850
+  },
+  {
+    "ref": "TER006",
+    "price": 4500
+  },
+  {
+    "ref": "EG010",
+    "price": 11500
+  },
+  {
+    "ref": "BL005",
+    "price": 14500
+  },
+  {
+    "ref": "BL011",
+    "price": 18000
+  },
+  {
+    "ref": "BL010",
+    "price": 16000
+  },
+  {
+    "ref": "MAR020",
+    "price": 55000
+  },
+  {
+    "ref": "MAR 027",
+    "price": 75000
+  },
+  {
+    "ref": "MAR024",
+    "price": 55000
+  },
+  {
+    "ref": "MAR022",
+    "price": 45000
+  },
+  {
+    "ref": "MAR021",
+    "price": 45000
+  },
+  {
+    "ref": "MAR025",
+    "price": 45000
+  },
+  {
+    "ref": "MAR001",
+    "price": 6000
+  },
+  {
+    "ref": "PAN018",
+    "price": 3750
+  },
+  {
+    "ref": "COS006",
+    "price": 14500
+  },
+  {
+    "ref": "COS005",
+    "price": 13500
+  },
+  {
+    "ref": "COS004",
+    "price": 12000
+  },
+  {
+    "ref": "COS003",
+    "price": 10000
+  },
+  {
+    "ref": "COS002",
+    "price": 15000
+  },
+  {
+    "ref": "COS001",
+    "price": 12500
+  },
+  {
+    "ref": "COS014",
+    "price": 12000
+  },
+  {
+    "ref": "COS007",
+    "price": 10000
+  },
+  {
+    "ref": "COS008",
+    "price": 11000
+  },
+  {
+    "ref": "COS009",
+    "price": 13500
+  },
+  {
+    "ref": "CUV008",
+    "price": 500
+  },
+  {
+    "ref": "CUV007",
+    "price": 650
+  },
+  {
+    "ref": "BAS006",
+    "price": 1600
+  },
+  {
+    "ref": "BAS005",
+    "price": 1950
+  },
+  {
+    "ref": "BAS004",
+    "price": 2400
+  },
+  {
+    "ref": "BAS002",
+    "price": 1500
+  },
+  {
+    "ref": "SEA017",
+    "price": 1500
+  },
+  {
+    "ref": "SEA006",
+    "price": 800
+  },
+  {
+    "ref": "SEA008",
+    "price": 600
+  },
+  {
+    "ref": "CAR018",
+    "price": 10000
+  },
+  {
+    "ref": "CAR015",
+    "price": 4200
+  },
+  {
+    "ref": "CAR016",
+    "price": 5750
+  },
+  {
+    "ref": "CAR017",
+    "price": 5750
+  },
+  {
+    "ref": "VER033",
+    "price": 10000
+  },
+  {
+    "ref": "VER073",
+    "price": 6500
+  },
+  {
+    "ref": "VER074",
+    "price": 6000
+  },
+  {
+    "ref": "VER070",
+    "price": 6500
+  },
+  {
+    "ref": "PAN017",
+    "price": 2000
+  },
+  {
+    "ref": "SEA010",
+    "price": 4500
+  },
+  {
+    "ref": "SEA011",
+    "price": 8000
+  },
+  {
+    "ref": "VER055",
+    "price": 4500
+  },
+  {
+    "ref": "VER005",
+    "price": 3900
+  },
+  {
+    "ref": "VER078",
+    "price": 2500
+  },
+  {
+    "ref": "VER053",
+    "price": 2750
+  },
+  {
+    "ref": "VER052",
+    "price": 1250
+  },
+  {
+    "ref": "VER054",
+    "price": 1250
+  },
+  {
+    "ref": "MUG026",
+    "price": 500
+  },
+  {
+    "ref": "MUG027",
+    "price": 600
+  },
+  {
+    "ref": "ASS113",
+    "price": 750
+  },
+  {
+    "ref": "ASS121",
+    "price": 950
+  },
+  {
+    "ref": "CUI012",
+    "price": 3075
+  },
+  {
+    "ref": "COU003",
+    "price": 750
+  },
+  {
+    "ref": "COU004",
+    "price": 900
+  },
+  {
+    "ref": "COU006",
+    "price": 900
+  },
+  {
+    "ref": "COU002",
+    "price": 900
+  },
+  {
+    "ref": "COU005",
+    "price": 1000
+  },
+  {
+    "ref": "CUI009",
+    "price": 700
+  },
+  {
+    "ref": "CUI008",
+    "price": 700
+  },
+  {
+    "ref": "CUI006",
+    "price": 500
+  },
+  {
+    "ref": "CUI014",
+    "price": 500
+  },
+  {
+    "ref": "CUI007",
+    "price": 700
+  },
+  {
+    "ref": "CUI013",
+    "price": 500
+  },
+  {
+    "ref": "SIZ002",
+    "price": 900
+  },
+  {
+    "ref": "COU017",
+    "price": 900
+  },
+  {
+    "ref": "COU009",
+    "price": 9000
+  },
+  {
+    "ref": "COU016",
+    "price": 650
+  },
+  {
+    "ref": "COU023",
+    "price": 10000
+  },
+  {
+    "ref": "COU019",
+    "price": 350
+  },
+  {
+    "ref": "MOR002",
+    "price": 1300
+  },
+  {
+    "ref": "PR004",
+    "price": 955
+  },
+  {
+    "ref": "OUV004",
+    "price": 400
+  },
+  {
+    "ref": "OUV005",
+    "price": 500
+  },
+  {
+    "ref": "ACR017",
+    "price": 1000
+  },
+  {
+    "ref": "CUB001",
+    "price": 450
+  },
+  {
+    "ref": "ACR016",
+    "price": 1200
+  },
+  {
+    "ref": "STK004",
+    "price": 1000
+  },
+  {
+    "ref": "FOU014",
+    "price": 750
+  },
+  {
+    "ref": "PIN007",
+    "price": 700
+  },
+  {
+    "ref": "PLA001",
+    "price": 750
+  },
+  {
+    "ref": "PLA004",
+    "price": 1000
+  },
+  {
+    "ref": "ACR019",
+    "price": 1200
+  },
+  {
+    "ref": "ACR018",
+    "price": 1200
+  },
+  {
+    "ref": "CUI001",
+    "price": 150
+  },
+  {
+    "ref": "PIN003",
+    "price": 700
+  },
+  {
+    "ref": "MOU001",
+    "price": 1000
+  },
+  {
+    "ref": "EPL003",
+    "price": 500
+  },
+  {
+    "ref": "ROL001",
+    "price": 800
+  },
+  {
+    "ref": "OUV003",
+    "price": 1750
+  },
+  {
+    "ref": "ACR005",
+    "price": 1000
+  },
+  {
+    "ref": "ACR004",
+    "price": 700
+  },
+  {
+    "ref": "ACR007",
+    "price": 800
+  },
+  {
+    "ref": "ACR006",
+    "price": 450
+  },
+  {
+    "ref": "GAN002",
+    "price": 475
+  },
+  {
+    "ref": "BAB027",
+    "price": 750
+  },
+  {
+    "ref": "ACR002",
+    "price": 1000
+  },
+  {
+    "ref": "ACR009",
+    "price": 850
+  },
+  {
+    "ref": "ACR015",
+    "price": 250
+  },
+  {
+    "ref": "ACR008",
+    "price": 850
+  },
+  {
+    "ref": "ANI023",
+    "price": 2250
+  },
+  {
+    "ref": "ANI016",
+    "price": 3000
+  },
+  {
+    "ref": "ANI006",
+    "price": 2700
+  },
+  {
+    "ref": "STA001",
+    "price": 275
+  },
+  {
+    "ref": "ANI017",
+    "price": 400
+  },
+  {
+    "ref": "ASS107",
+    "price": 13500
+  },
+  {
+    "ref": "FL016",
+    "price": 1000
+  },
+  {
+    "ref": "TRI013",
+    "price": 4950
+  },
+  {
+    "ref": "TRI012",
+    "price": 9000
+  },
+  {
+    "ref": "PAN024",
+    "price": 1400
+  },
+  {
+    "ref": "PL014",
+    "price": 600
+  },
+  {
+    "ref": "PAN025",
+    "price": 3200
+  }
+]

@@ -113,5 +113,31 @@ export class ProductsService {
       throw new Error(`Error deleting product: ${error.message}`);
     }
   }
-
+    
+  async filterProductsByField(filterValue: string): Promise<Product[]> {
+    const productsRef = admin.firestore().collection('products');
+  
+    try {
+      const querySnapshot = await productsRef.where('ref', '==', filterValue).get(); // Replace 'ref' with the desired field to search
+      const filteredProducts: Product[] = [];
+  
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        const modifiedProduct = {
+          id: doc.id,
+          ref: data.ref,
+          name: data.name,
+          category: data.category,
+          quantity: data.quantity,
+          image: data.image,
+          price: data.price,
+        };
+        filteredProducts.push(modifiedProduct);
+      });
+  
+      return filteredProducts;
+    } catch (error) {
+      throw new Error(`Error filtering products by value: ${error.message}`);
+    }
+  }
 }

@@ -124,7 +124,7 @@ export class OrdersController {
       await getPDFPublicURL().catch(console.error);
       await client.messages
         .create({
-          body: message,
+          body: newOrder.phone_number,
           from: 'whatsapp:+14155238886',
           to: 'whatsapp:+24162101099',
           mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
@@ -133,7 +133,7 @@ export class OrdersController {
 
       await client.messages
         .create({
-          body: message,
+          body: newOrder.phone_number,
           from: 'whatsapp:+14155238886',
           to: 'whatsapp:+9613942350',
           mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]

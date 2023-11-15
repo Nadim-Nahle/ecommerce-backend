@@ -126,7 +126,7 @@ export class OrdersController {
         .create({
           body: newOrder.phone_number,
           from: 'whatsapp:+14155238886',
-          to: 'whatsapp:+24162101099',
+          to: 'whatsapp:+24102607070',
           mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
         })
         .then((message) => console.log(message.sid));

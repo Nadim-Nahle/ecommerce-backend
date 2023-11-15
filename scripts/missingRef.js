@@ -1,0 +1,1077 @@
+const admin = require('firebase-admin');
+const serviceAccount = require('../key.json');
+
+const fs = require('fs');
+const productsFile = '../assets/products-v2.json';
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://your-project-id.firebaseio.com', // Replace with your Firestore database URL
+});
+
+const db = admin.firestore();
+
+var cosmetics = [
+  {
+    "link": "https://i.ibb.co/2h7x4XW/BAU005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/QdTZwKw/BDB001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/1T6nRZj/BDB011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/HhGM8pL/CHA009.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/WPSWp1g/CR002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/HdW8DR4/CR005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/QXppn4k/CR006.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/WgbVkCW/CRE001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/85zhMb2/CRE002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/TKWdG8B/CRE009.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Lprq3Cb/CRE010.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/nnFgvvr/CRE018.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/ZBzZXnQ/CRE022.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/1Rb9QrL/CRE026.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Vwf90bW/CRE030.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/F0C1sgq/CRE035.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/QDtDt18/DEF004.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Str0RqN/DEF005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/KyZSwWw/DEF007.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/3BXGr7n/DEM001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/bLMjcCZ/DEO021.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/RCBkQtY/DOD002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/F4mVM4C/DOD008.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/TTNSgGW/DS_70.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/nQNsthj/DS_102.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/kqC9M65/DS_103.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/cXd4T3V/DS_105.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/7YFJCny/DS_106.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/nzg7PXt/ED005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/mTFPWjD/EDC006.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/31N7Wgb/EDC007.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/NrNrZPS/EDC009.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/WkNMGSh/EDC010.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/N3zvm6X/EDC016.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/82XSNFp/EDT001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/fvRy1yB/EDT002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/XXFQ1gY/EDT003.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Fs2y7P4/EDT004.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/0tQWtVv/EDT006.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/M1rrSb2/EDT007.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/bBN9j4L/G025.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/DkHrMwh/GDO001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/dpkYgpR/GDO005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/5GnQnq8/GDO007.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/cYF2mZL/GDO008.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/G5pJHVV/GDO009.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/6gb2sWT/GDO010.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/syMm4SH/GDO011.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/NNgP157/GDO014.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/gFBdrTQ/GDO018.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/pL6852z/GDO019.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/hfbpgWn/GDO020.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/0fW1KGN/GDO022.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/mhm3Z4D/GEL004.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/RYZFGfr/GEL005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/GdzfCyZ/GEL011.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/pQS543p/GEL013.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/wdDgXWL/GEL015.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/NT23ngY/GEL020.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/vQpvSbq/GEL027.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/j3jMFtk/GEL028.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/1n1Zssx/HUI001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/8Y60X7L/HUI003.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/DrxPyqs/HUI004.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/qMNJHHS/HUI005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/5jSWmk0/HUI010.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/XydR7VD/LAI_002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/gvMxKJM/LAI_004.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/CzGBSy6/LAI_008.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/J5RhqPc/LAI_009.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/YjYNDBw/LAI_001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/LhD1r8h/LAI_005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/3fMhdzr/LAI_011.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/ZKSxGSb/LAI_012.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/DgsbMmL/LAI_013.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/mSwHvYr/LAI_014.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/2qG28dX/LAI_017.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/CKr8JKN/LAI_018.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/1Twn0SW/LAI024.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Ssx686s/LAI028.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/p2835Bb/LAI036.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/YZQYsqc/LAI039.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/prRZbQc/LAI043.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/6nYTPHt/LAI044.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/MS04MN1/LAIT_009.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/TqVC2jH/LIP002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/VW3xHhW/LIP004.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/JRfhTF6/LIP007.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/H7Sxq2n/LIP010.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Thv5gqT/LIP011.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/d72N6t9/LOT001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/vYxDhhD/MAS001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/px0pVws/MSK001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Hg8Cjcs/MSK002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/BNhDy4s/MSK003.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/304r084/ODC018.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/sK7hNVp/PAR017.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/48T1KQY/PAR020.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/kBt6QGq/PAR026.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/SvktG6h/PAR028.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/8MhT96b/PAR031.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/hXCMw3Y/PAR034.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/gvvsY3c/POM001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/KbqPLpb/POM002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/4sN555Q/POM003.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/rd8CRLG/POM006.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/xMzp94J/POM007.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/yk580c3/POM008.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/yP0f3fy/POM010.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/ZHDc3Nq/SA023.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/qpk3JHh/SAV_001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Gdc4bMD/SAV011.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Chwc2K2/SAV11.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/xMVnWdQ/SAV012.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/BTXfc0W/SAV12.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/8DZ0wd8/SAV15.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/QrHwDdJ/SAV017.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/99md6Rk/SAV027.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/cbC478B/SAV030.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/5TSnWmg/SAV031.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/hHJqcSj/SAV034.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/nP4c3cQ/SAV036.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/cCDZNJY/SAV037.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/3ySK5zc/SAV040.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/fvx7c9h/SAV042.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/DrG8LbX/SHA002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/FVrF1VF/SHA005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/XzJmKdm/SHA006.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/zZNjGV3/SHA007.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/yhzbnTs/SHA008.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/p2S4Bzw/SPA001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/xmJFXqM/SPL001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/mtQ4YS3/SPR003.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/hCjzq4w/SPR004.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/7NWCXc9/SRM005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/s1rT1Kc/TAL001.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/3yzj4mS/TAL011.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/DfPPbYK/TALC002.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/dbxMzXS/TALC003.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/Xp1k7DF/TALC005.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/3cknVWn/VR003.jpg\t"
+  },
+  {
+    "link": "https://i.ibb.co/dbCgGcr/VR004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/MMr2yGb/BDB001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/zH5c87F/BDB011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/dMsvWS8/CHA009.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/rsXX3Ng/CR002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/5Mwm8Rh/CR005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/kmt4w73/CR006.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/NVkKyLN/CRE001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/VxFMPy0/CRE002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/ZBxmDBB/CRE009.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Dr3RRx2/CRE018.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/xS6zjT3/CRE010.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/CwnzPvH/CRE022.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/dMrXbSX/CRE026.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/N6gw2HD/CRE030.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/xGB5CT8/CRE035.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/DbJ46Wn/DEF004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/GHmJ2DV/DEF005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/25xvXxm/DEF007.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/HKzRZRK/DEM001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/9VgSvnr/DEO021.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/F7QSLy4/DOD002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/nwBwqwz/DOD008.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/zrc6zVw/DS_70.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Pxf6XQt/DS_102.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/cQJKwq7/DS_103.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Q7WPqyz/DS_105.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/vkT17hG/ED005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/0V48K5z/DS_106.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/cCGcprb/EDC006.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/F7X7RS0/EDC007.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/7GW3C3x/EDC009.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/wYnQFZf/EDC010.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/nRx5YWy/EDT001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/hWGk1WQ/EDC016.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/rGzVQmq/EDT002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/9cx78zT/EDT003.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/cgRZPrr/EDT004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/3SQhCn8/EDT006.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/c3hTB8n/EDT007.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/b2CZ2sB/GDO001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/chYTMMY/G025.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/xg45qbc/GDO005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Xz98vc7/GDO007.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/mS77mFm/GDO008.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/56NQbNv/GDO09.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/M79Q81r/GDO010.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Gdp5sS7/GDO011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/KyHxZJm/GDO014.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/yy5PQkh/GDO018.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/YpXD65F/GDO019.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/NmBQHPP/GDO020.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/NV6pcJG/GDO022.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/pfQWBrZ/GEL004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/gy71Cz2/GEL005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Snk4dXV/GEL011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/tJWHC9S/GEL013.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/dLDFhMM/GEL015.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/3Wj6hnD/GEL020.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/3BJMGry/GEL027.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/wN7RbVJ/HUI001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/9wdKN8H/GEL028.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/9TygJFV/HUI003.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/23KKfs5/HUI004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/n0sMvZ6/HUI005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/2YgHVfv/HUI010.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/zm47Hbt/LAI_001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/bzP64Q7/LAI_002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/7Qd00nV/LAI_004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/mBZYyGm/LAI_005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/kK6xZXG/LAI_008.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/tcxjTZb/LAI_009.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/N16tyTF/LAI_011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/WPxpf1B/LAI_012.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/yqf0B7z/LAI_013.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/whfHxnm/LAI_014.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/qNvNVXb/LAI_017.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/gmN9gsP/LAI_018.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/YbhLJLQ/LAI024.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/SymhZsF/LAI028.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/rk8xxQg/LAI036.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/sFBBKgn/LAI039.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/hWdNg0M/LAI043.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/FWH9Mp6/LAI044.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/tD9DRtf/LAIT_009.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/prj7MW6/LIP002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/b18kgQN/LIP004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/KLX4vYc/LIP007.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/w6bxdSN/LIP010.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/G2Ls2Dk/LIP011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/ftGfm6p/LIP012.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/X39VNTp/LOT001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/9Y3sdPD/MAS001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/CbWWnN4/MSK001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/nftkLcG/MSK002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/JBdB8G9/MSK003.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/XXdxRNn/ODC018.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/fdKGqd8/PAR017.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/MD8XHR0/PAR020.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/gTJKrzd/PAR026.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/qMV3Syd/PAR028.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/YZtxtyG/PAR031.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Rp2mz2k/PAR034.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/J338hsn/POM001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/bW6RD0H/POM002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/wYP4RP4/POM003.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/9Zv2n46/POM006.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Vvw0Hjg/POM007.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/PDdhZFf/POM008.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/37Bm9S1/POM010.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/LhNh2w1/SA023.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/ggp6kT9/SAV_001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/RTyR4w8/SAV011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/yszbTY3/SAV11.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/GMX4Ytv/SAV012.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/2qsc4Wg/SAV12.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/4Wc8tfV/SAV15.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/gMchsD5/SAV017.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/LgLj4N9/SAV027.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/GcH2d0q/SAV030.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/7SvtbjW/SAV031.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/pvbDpYz/SAV034.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/SsCcK6Q/SAV036.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/1T7CGNx/SAV037.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/DffPhW2/SAV040.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/9tPM86s/SAV042.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/7GDN6S3/SHA002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/YPmjNN0/SHA005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/yRx3jns/SHA006.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/4d558qN/SHA007.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/1X0cBR2/SHA008.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/C6hZYwF/SPA001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/fY8SXYN/SPL001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/t8CP3DM/SPR003.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/3MR3n0d/SPR004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/0VK0WhK/SRM005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/vQmfQmy/TAL001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/LgwSd90/TAL011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/WVJZcpr/TALC002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Mkfc5S9/TALC003.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/X4P38xk/TALC005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/cNJ1wZ5/VR003.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/X7p1CGg/VR004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/QQcDGmg/BAU005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/frLpMF1/GEL006.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/xhTWN98/GEL007.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/0yGQfdT/GEL016.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/vjbbkWX/GEL017.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/rQGM1GJ/GEL021.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/m4d7M7N/GLY001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/ZWqHm2T/LAI_017.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/qs4L9Sz/LAI011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/QdxQt80/LAI029.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/rFDrVNj/LAI040.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/nwCGJS2/LaI045.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/DMJRGNn/LAI051.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/PYd3RvX/LAI052.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/MD0Mdh4/LIP005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/3ddLvGw/LIP008.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Z197nsj/PAR006.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/0JN50yk/PAR018.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/XpC2yLL/PAR021.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/g6XZsVv/PAR028.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/smSgJPV/PAR030.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/rMHYNbB/SAV16.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/BT5T2Sv/SAV019.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/QjZb7kV/SAV022.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/xgVtd12/SAV026.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/YXSz9Zg/20231115_095838.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/vwHj4d0/ANT002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/PjQr3z6/BAU002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/74tLHsT/BAU007.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/PxD4Wnc/BAU008.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/f8MmHVs/BAU009.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/JtqQHWf/BDB003.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/wsRBJB3/C34_B96.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/N3NGC36/CR008.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/hB88dFt/CR009.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/s9DCy02/CR010.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/W536PkH/CR011.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/F8rj6BS/CR012.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Lx04Gnw/CRE019.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/vJSN41W/CRE025.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/znznPDc/DEF002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/7273m98/DEF010.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/CwBLk6c/DEN001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/jg82GKL/DEN002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Ln11Tb7/DEO020.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/WFVdZ1B/DIS003.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/DYnHry9/DIS004.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/q5tyZkH/DIS005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/kKBZQFd/E08_D22.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/bNkbb5D/EDT002.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/j3pqsdQ/EYE001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/Fm4tRpw/GDO005.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/hD2Pzxx/GDO023.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/GQLyFnW/GDO024.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/M6tg9Z9/GDO026.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/gmDYsCf/GEL001.jpg"
+  },
+  {
+    "link": "https://i.ibb.co/bsKCXyc/GEL002.jpg"
+  }
+]
+
+fs.readFile(productsFile, 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  try {
+    const jsonData = JSON.parse(data);
+
+    for (const cosmetic of cosmetics) {
+      const extractedValue = extractValueFromURL(cosmetic.link);
+      let valueFound = false;
+
+      for (const item of jsonData) {
+        if (extractedValue === item.ref) {
+          valueFound = true;
+          break; // No need to continue checking once found
+        }
+      }
+
+      if (!valueFound) {
+        console.log(extractedValue);
+      }
+    }
+  } catch (jsonError) {
+    console.error('Error parsing JSON:', jsonError);
+  }
+});
+
+function extractValueFromURL(url) {
+  const startIndex = url.lastIndexOf('/') + 1;
+  const endIndex = url.lastIndexOf('.jpg');
+
+  if (startIndex !== -1 && endIndex !== -1) {
+    return url.substring(startIndex, endIndex);
+  } else {
+    return null;
+  }
+}

@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { ConflictException, Injectable } from '@nestjs/common';
 import * as admin from 'firebase-admin';
 import { CreateProductDto } from './create-product.dto';
 import { Product } from './product.interface';
@@ -54,11 +54,10 @@ export class ProductsService {
     const querySnapshot = await productsRef.where('ref', '==', ref).get();
 
     if (!querySnapshot.empty) {
-        // ref is not unique, return an error response
-        return {
-            error: 'ref must be unique',
-            status: 400,
-        };
+      if (!querySnapshot.empty) {
+        // ref is not unique, throw a ConflictException
+        throw new ConflictException('ref must be unique');
+      }
     }
 
     // If ref is unique, add the product to Firestore

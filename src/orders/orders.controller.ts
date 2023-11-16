@@ -1,4 +1,4 @@
-import { Controller, Post, Body, UsePipes, ValidationPipe } from '@nestjs/common';
+import { Controller, Post, Body, UsePipes, ValidationPipe, Get, Response } from '@nestjs/common';
 import * as admin from 'firebase-admin';
 import { CreateOrderDTO } from './create-order.dto';
 import { Storage } from '@google-cloud/storage';
@@ -125,7 +125,7 @@ export class OrdersController {
       await client.messages
         .create({
           body: newOrder.phone_number,
-          from: 'whatsapp:+14155238886',
+          from: 'whatsapp:+14155238886xx1',
           to: 'whatsapp:+24102607070',
           mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
         })
@@ -150,4 +150,27 @@ export class OrdersController {
       throw new Error('Failed to create the order');
     }
   }
+
+  @Get()
+  async getOrders(@Response() response: any){
+    try {
+      const ordersRef = admin.firestore().collection('orders');
+    const snapshot = await ordersRef.get();
+
+    const orders = [];
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+      
+      orders.push(data);
+    });
+    const totalCount = orders.length; // You can modify this to get the actual count
+    response.header('X-Total-Count', totalCount.toString()); // Set the X-Total-Count header
+
+      return response.json(orders);
+      
+    } catch (error) {
+      return `Failed: ${error.message}`;
+    }
+    
+    }
 }

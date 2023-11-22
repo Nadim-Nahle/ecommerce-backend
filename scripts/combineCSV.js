@@ -2,7 +2,7 @@ const admin = require('firebase-admin');
 const serviceAccount = require('../key.json');
 
 const fs = require('fs');
-const productsFile = '../assets/products-plastic.json';
+const productsFile = '../assets/products-v2.json';
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -352,10 +352,10 @@ var cosmetics = [
     "link": "https://i.ibb.co/kBbsGRg/FLM001.jpg"
   },
   {
-    "link": "https://i.ibb.co/QHwNm93/FOU04.jpg"
+    "link": "https://i.ibb.co/QHwNm93/FOU004.jpg"
   },
   {
-    "link": "https://i.ibb.co/xfYc3zj/FOU05.jpg"
+    "link": "https://i.ibb.co/xfYc3zj/FOU005.jpg"
   },
   {
     "link": "https://i.ibb.co/9h78dp3/FOU010.jpg"

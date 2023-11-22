@@ -125,7 +125,7 @@ export class OrdersController {
       await client.messages
         .create({
           body: newOrder.phone_number,
-          from: 'whatsapp:+14155238886xx1',
+          from: 'whatsapp:+14155238886',
           to: 'whatsapp:+24102607070',
           mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
         })

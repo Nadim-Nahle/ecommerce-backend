@@ -2,6 +2,7 @@ import { ConflictException, Injectable } from '@nestjs/common';
 import * as admin from 'firebase-admin';
 import { CreateProductDto } from './create-product.dto';
 import { Product } from './product.interface';
+import { FieldValue } from '@google-cloud/firestore';
 
 @Injectable()
 export class ProductsService {
@@ -22,6 +23,7 @@ export class ProductsService {
         quantity: data.quantity,
         image: data.image,
         price: data.price,
+        createdAt: data.createdAt
       };
       products.push(modifiedProduct);
     });
@@ -61,7 +63,11 @@ export class ProductsService {
     }
 
     // If ref is unique, add the product to Firestore
-    const productData = { ref, name, image, quantity, price, category };
+    const productData = {
+      ref, name, image, quantity, price, category,
+      createdAt: FieldValue.serverTimestamp(), // Add timestamp
+      updatedAt: FieldValue.serverTimestamp(),
+    };
     const result = await productsRef.add(productData);
 
     return { id: result.id, ...productData };
@@ -77,7 +83,7 @@ export class ProductsService {
       throw new Error(`Error updating product: ${error.message}`);
     }
   }
-  
+
   async getProductById(id: string): Promise<Product | null> {
     const productRef = admin.firestore().collection('products').doc(id);
 
@@ -112,14 +118,14 @@ export class ProductsService {
       throw new Error(`Error deleting product: ${error.message}`);
     }
   }
-    
+
   async filterProductsByField(filterValue: string): Promise<Product[]> {
     const productsRef = admin.firestore().collection('products');
-  
+
     try {
       const querySnapshot = await productsRef.where('ref', '==', filterValue).get(); // Replace 'ref' with the desired field to search
       const filteredProducts: Product[] = [];
-  
+
       querySnapshot.forEach((doc) => {
         const data = doc.data();
         const modifiedProduct = {
@@ -130,10 +136,11 @@ export class ProductsService {
           quantity: data.quantity,
           image: data.image,
           price: data.price,
+          createdAt: data.createdAt
         };
         filteredProducts.push(modifiedProduct);
       });
-  
+
       return filteredProducts;
     } catch (error) {
       throw new Error(`Error filtering products by value: ${error.message}`);

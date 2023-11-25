@@ -23,7 +23,7 @@ fs.readFile(pricesFile, 'utf8', (err, data) => {
             const { ref, price } = priceInfo;
             
             // Update the price of the product with the matching 'ref' in Firestore
-            const productRef = db.collection('products').where('ref', '==', ref);
+            const productRef = db.collection('products').where('ref', '==', ref.toUpperCase());
 
             productRef.get().then((snapshot) => {
                 if (snapshot.empty) {

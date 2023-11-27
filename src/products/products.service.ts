@@ -74,15 +74,22 @@ export class ProductsService {
   }
 
   async updateProduct(id: string, updatedProductData: Partial<Product>): Promise<void> {
-    const productRef = admin.firestore().collection('products').doc(id);;
+  const productRef = admin.firestore().collection('products').doc(id);
 
-    try {
-      await productRef.update(updatedProductData);
-    } catch (error) {
-      // Handle errors, such as product not found or Firestore update error
-      throw new Error(`Error updating product: ${error.message}`);
+  try {
+    const productSnapshot = await productRef.get();
+
+    if (!productSnapshot.exists) {
+      throw new Error(`Product with id ${id} not found`);
     }
+
+    // Update the existing document
+    await productRef.update(updatedProductData);
+  } catch (error) {
+    // Handle errors, such as Firestore update error
+    throw new Error(`Error updating product: ${error.message}`);
   }
+}
 
   async getProductById(id: string): Promise<Product | null> {
     const productRef = admin.firestore().collection('products').doc(id);

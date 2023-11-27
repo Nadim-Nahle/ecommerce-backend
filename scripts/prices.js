@@ -11,40 +11,34 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
-fs.readFile(pricesFile, 'utf8', (err, data) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
+const firestore = admin.firestore();
 
+async function convertPrices() {
     try {
-        const priceData = JSON.parse(data);
-        for (const priceInfo of priceData) {
-            const { ref, price } = priceInfo;
-            
-            // Update the price of the product with the matching 'ref' in Firestore
-            const productRef = db.collection('products').where('ref', '==', ref.toUpperCase());
-
-            productRef.get().then((snapshot) => {
-                if (snapshot.empty) {
-                    console.log(`No product found with ref: ${ref}`);
-                } else {
-                    snapshot.forEach((doc) => {
-                        // Update the price of the product
-                        db.collection('products').doc(doc.id).update({ price: price })
-                            .then(() => {
-                                console.log(`Updated price for product with ref ${ref} to ${price}`);
-                            })
-                            .catch((error) => {
-                                console.error('Error updating product:', error);
-                            });
-                    });
-                }
-            }).catch((error) => {
-                console.error('Error fetching product:', error);
-            });
+      const productsCollection = firestore.collection('products');
+      const querySnapshot = await productsCollection.get();
+  
+      const batch = firestore.batch();
+  
+      querySnapshot.forEach(doc => {
+        const priceString = doc.data().price;
+  
+        if (typeof priceString === 'string') {
+          const priceNumber = parseFloat(priceString.replace(/[^\d.-]/g, '')); // Remove non-numeric characters
+          batch.update(doc.ref, { price: priceNumber });
+        } else {
+          console.warn(`Skipping document with invalid priceString: ${priceString}`);
         }
-    } catch (jsonError) {
-        console.error('Error parsing JSON:', jsonError);
+      });
+  
+      await batch.commit();
+  
+      console.log('Prices converted successfully for products with ref EDC004.');
+    } catch (error) {
+      console.error('Error converting prices:', error);
+    } finally {
+      admin.app().delete(); // Ensure to close the Firebase app connection
     }
-});
+  }
+  
+  convertPrices();

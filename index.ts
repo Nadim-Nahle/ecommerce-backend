@@ -4,17 +4,12 @@ import express from 'express';
 import * as functions from 'firebase-functions';
 import { AppModule } from './src/app.module';
 import * as admin from 'firebase-admin';
+import  environment  from './src/environments/env';
 
 const expressServer = express();
 
-import * as serviceAccount from './key.json'; // Adjust the filename as needed
-
-const serviceAccountKey: admin.ServiceAccount = serviceAccount as admin.ServiceAccount;
-
-
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccountKey),
-  databaseURL: 'https://ecommerce-nadim.firebaseio.com',
+  credential: admin.credential.cert(environment),
 });
 
 const createFunction = async (expressInstance): Promise<void> => {

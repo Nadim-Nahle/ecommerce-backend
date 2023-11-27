@@ -11,7 +11,16 @@
       ],
       "predeploy": [
         "npm --prefix \"$RESOURCE_DIR\" run build"
-      ]
+      ],
+      "targets": {
+        "qa": {
+          "functions": ["ecommerce-nadim-qa"]
+        },
+        "prod": {
+          "functions": ["ecommerce-nadim"]
+        }
+      }
+      
     }
   ]
 }

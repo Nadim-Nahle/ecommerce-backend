@@ -7,29 +7,41 @@ import { FieldValue } from '@google-cloud/firestore';
 @Injectable()
 export class ProductsService {
 
-  async getAllProducts() {
-
+  async getAllProducts(): Promise<Product[]> {
     const productsRef = admin.firestore().collection('products');
-    const snapshot = await productsRef.get();
-
-    const products = [];
-    snapshot.forEach((doc) => {
-      const data = doc.data();
-      const modifiedProduct = {
-        id: doc.id,
-        ref: data.ref,
-        name: data.name,
-        category: data.category,
-        quantity: data.quantity,
-        image: data.image,
-        price: data.price,
-        createdAt: data.createdAt
-      };
-      products.push(modifiedProduct);
-    });
-
-    return products;
+  
+    try {
+      const querySnapshot = await productsRef.get();
+      const products: Product[] = [];
+  
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        const modifiedProduct = {
+          id: doc.id,
+          ref: data.ref,
+          name: data.name,
+          category: data.category,
+          quantity: data.quantity,
+          image: data.image,
+          price: data.price,
+          createdAt: data.createdAt
+        };
+        products.push(modifiedProduct);
+      });
+  
+      // Sort products based on createdAt field in descending order
+      products.sort((a, b) => {
+        const createdAtA = a.createdAt?._seconds || 0;
+        const createdAtB = b.createdAt?._seconds || 0;
+        return createdAtB - createdAtA;
+      });
+  
+      return products;
+    } catch (error) {
+      throw new Error(`Error getting all products: ${error.message}`);
+    }
   }
+
   async getAllCategories() {
 
     const productsRef = admin.firestore().collection('categories');

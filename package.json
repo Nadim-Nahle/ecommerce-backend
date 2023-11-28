@@ -27,8 +27,10 @@
     "shell": "npm run build && firebase functions:shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "update-env": "ts-node scripts/updateEnv"
-  },
+    "update-env": "ts-node scripts/updateEnv",
+    "deploy-qa": "npm run update-env -- qa && firebase use ecommerce-nadim-qa && npm run deploy",
+    "deploy-prod": "npm run update-env && firebase use ecommerce-nadim && npm run deploy",
+    },
   "engines": {
     "node": "18"
   },

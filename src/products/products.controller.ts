@@ -54,17 +54,14 @@ export class ProductsController {
   ) {
     try {
       if (!filter) {
-        
-      const products = await this.productsService.getAllProducts();
-      const totalCount = products.length; // You can modify this to get the actual count
-      response.header('X-Total-Count', totalCount.toString()); // Set the X-Total-Count header
-      return response.json(products)
 
+        const products = await this.productsService.getAllProducts();
+        const totalCount = products.length; // You can modify this to get the actual count
+        response.header('X-Total-Count', totalCount.toString()); // Set the X-Total-Count header
+        return response.json(products)
       }
 
-
-
-      const value  = filter;
+      const value = filter;
 
       const filteredProducts = await this.productsService.filterProductsByField(value);
 

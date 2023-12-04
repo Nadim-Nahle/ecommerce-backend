@@ -1,16 +1,17 @@
-const environment: any = {
-  type: "service_account",
-  project_id: "ecommerce-nadim-qa",
-  private_key_id: "8fbec7439cffd8a47b262ccf86ca411f56c5b506",
-  private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC3hjRRIu/OGY/I\n4sooNd5sR9833Ryk0itSDSsAwEJTP39lI+gzIdCpQLqhyFtgQwdRk2ZLgT1qrlgE\nVq2JjMwAWktPDOXPE8z0CCUaT+S0NXqXb+PAwxuwC5/H1Hirco15d9Gvrt8ukDfA\n17i4O3LApiY+Wg1NOboBNyATiEX+xIojO/5MLR7hPD8H8sHUWzmXXdB1Z1wxKvxy\nYpAhi5b0jWAHKi6Ca5c6mkCSNYg7FcgVDBmFWc60NMulGxhCxRo5N3EK6Z7eHqDr\n2pLGDm6LxzXhWAbzZATYsM6YFG2uvQs8uUCnDJ5SaCyX5JCMf/Mi5qCdGr6qYxjb\nfzDu9zNzAgMBAAECggEABLPvkS60JUgi3LXCtcrOJKZ41+1/MxgOv1CphiCKCdbn\nIFVT58+H4urO8eWP5G13qAtcJwhbCIEiCulUE2HelyVcHDnLKIYsJPN6ezIV65MD\nE1ky5X7L5/nwpNeY39ZmPZwFp2xzoe/gnSXKBvY1NkXIykhXHKYAjIr4IpgAKKK2\nwEkOCkePrze6gCjKS4SsSvrJiPVRiRLi0niLAsED4XtEdCIiJkbEIi/5JuPujxiZ\ncGn2iCrt0e58QzaMDS68P2Yly2zirrc2cR8+b3dOyJFlsnrfdKtd670vzE2vficu\ntDGFhkwpeQJFiWXvJMusurSICKnUdm8k/buZlQ7/TQKBgQDnWqkS9RpqqOs5IWr8\nnzcik/kRvAVrxHYNZ8CeTBPXiJC8TxQ5EIEqvZjWr9ImQzSO+t6MW670yxjfcaJp\nauoAMWcaimCKxstppGghnW/HW+IQi9iq2yt/fxJiwntSX+CGRX1OwouJAm4hlxym\nLNgqHx3JNPC/8EEAGvhrcfsXFwKBgQDLEyhoceLWjSxnzSd3ZCawdPrOxMEdXiBo\nuFFUkrff2zMvtCvr8gdvSadHrTekRebypdKqxwqPqyHr0UNmwxaFLbBhWTUllbrn\nIXEVB0ohs3lZGOhufb3U+yJznfDwpqae9f6CHAKuRK/iL+M8it0XiXGbAZUd1Pym\nlyBnuUZABQKBgHf1/IFF8kKoAAAJoe4HqJEXZSia87yjjAr7Z1ctX4R83X+nCXdl\nZXSCBwQa+r64TkJtNoRU7e0kemsyAuLiex9Kfom2gsSyu7q1cwErH1CiBiBKQzik\nmHNtslzfNw7JhCRbV9RE8BFE31Ivhr1rt1Jv/APenY8IxsuFMJaV7XpVAoGAWDPU\n/DBi9w9QNzGbL7cXOtNEUGSTAB9u8i0EXjhvltJNVC3sWcnAwux5tJ8eqMIXwlKV\nwsk65BXPYO5+WPbpJCUpE888TzvOdy9GP3zwDN04GqO/6KXCuuvtFcyG5u9rNWXh\nCkACRhDdV9+20gf6aYuwBURVsSReLDk9wO9u/MUCgYBpIa5bxYRMEaZ4ZhxUp8QC\nAMP3EGLiJ+VRSEYC6zYr6hd4nPXUDWNd+f7jwIS+zlsIUgXIQ62ZPEh8P8PjCAJv\ns1l5bxbEXvVN89CwsfrvrJ3//nCEXut/5pDI5KEC4KJ+pk3qDoMCgu2W8HiWGHuu\nxsaPoXrd36U6i/D1eyqLOg==\n-----END PRIVATE KEY-----\n",
-  client_email: "firebase-adminsdk-hwd6b@ecommerce-nadim-qa.iam.gserviceaccount.com",
-  client_id: "114326998016513659256",
-  auth_uri: "https://accounts.google.com/o/oauth2/auth",
-  token_uri: "https://oauth2.googleapis.com/token",
-  auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
-  client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-hwd6b%40ecommerce-nadim-qa.iam.gserviceaccount.com",
-  universe_domain: "googleapis.com",
-  databaseURL: "https://ecommerce-nadim-qa-default-rtdb.europe-west1.firebasedatabase.app"
-}
+const environment : any = {
+    type: "service_account",
+    project_id: "ecommerce-nadim",
+    private_key_id: "040961381b0b7154d073de37a3df34461f6b2396",
+    private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDr3+PpkGQvL+TW\npOy6GVhKCUfpVg2hT1EkRuVdBtsS5Y8LY5MKPD7V0kflgjNdK+PChKMdCYod0hP7\n4Iq87xAIIWVd/5/KMmNJ7f5Zs8cA5DUduyPVAlBeVm9oTNOO7QDi1iwYL78aAxt1\nbAtKD9ivSLy+5jJgKRdF7IqxunwT3/Nnz4+Va83+G9xYc+7AvYvOPhbwL8l3dtvE\nsfZRZoOpc5sNJLUuyBHTPU0y95m9vHQDXQvWZKpWAFy4SUrtTk0BUbh1l+DjBa2I\nJZldzSFESmgdgLxzmAGnkXFhtG1cWVBSxA8MTBDtLHzOLNwF11PTXmMUH13eoKtw\nMjfeI4JBAgMBAAECggEAIhfXGNgMAwizKkCQZEhsNddS6OvNReGcYtf0fcETQo9N\nC7e1ddHwwHXdJSlFRKmmtA5Oh/tBrBRvWwVrnZTDBnR9SFw9u7tov94sg3QJcZw1\nU+TMGxUd32TdmX/GnG6upXA7fgt4sx57248QWqt2WxpHsyK8E/YcgmOG8IV55bfp\nV0D41WjqO0KtXzOtz0xCBSPTYCxeOMEiGcOJLkEcAy0Y1Zjg2fsIZtdvoHhF5SXN\ng703O3YqDcYo3qsyXF4cP6IsO+lGteou7Kvq4e/IKFgvIRooJ/cYp5nXJ93mclk6\nEKeVvSkPRcyj6jF7qj4lDyknVAF1ii8aZ3t9OnRYOQKBgQD2boRKSzLg3eA0rDoB\nhaGfYHICxwTCmUslQ/5QYk3f7wFK6N1qHqgk3kFepIn5jfTgkAXgNXlm5GLJu/3M\nky93CwZNqQG1cPzl2TCj4v2qw374Aa8XBVEX1lZPk1Ybwj72Qlsat8j0P117XNPC\neNEczfCEUok/6PpFei1MX+cNOwKBgQD1CHAKXWYj1om49D8yPqN2xxxB4yly3a8I\nKpwJ6iJA2Dv5aIigujlWQBB1Uv5hZVn/i6AYD+aFJw5zIKahaAjf7qmBFWfQVq3B\nNdfyKyiNnXxy3dMW7tjCnK5GUOOm+gPR17iBeKHWPwtC6T9uBVPHI1Au73jHr98r\n0rovavOmswKBgQCs9CvMqLJwt8gfr7CWWN9yKBJceKmSmlvvL6VRbW0SeYACvySG\n0jVYitR+RCTCDSuMYAh/r4gg+rGKvHIIHlT1y7sEzlTwrvgPqTtGCo3WR5bZIPVt\nxsF/ZWL2PoX0vYPK+g9O1SYopkBJ0ICewISjHrZraDIDtNPR50nbjINw+QKBgQDs\ncOrkJYH03QTiMtV0X1sOt0z+Cvwo+d72y17sdj/9QGqG3SbRqUDAiGsZOy95vfnd\nC9c8wMMZAzn/P6dqol/F7Z8kjwow0CM0CAfLh3fHRwsaMBCL1YfWKqhD87PooOHk\nr/s6+7N2cDkmpLnvKTbRNrMdxzhNv9hiiiHctaBM3wKBgQDECVS787wKS3b4WvhL\nDXWbxlIORTvJHgUBaOjtXiJ/J6/Lka9LCwL6tKYsTMNyuobVOYGe9iwXO0Zn7VsR\nJaLsuydi0THpFgAOoFokM2a6fGmpdy1MUeOhgGXmLoQx7bZGFKsrwQqCLnKrUYDX\npz4Wrh3pEiwf4UcSNhCoQ43rDg==\n-----END PRIVATE KEY-----\n",
+    client_email: "firebase-adminsdk-ayo50@ecommerce-nadim.iam.gserviceaccount.com",
+    client_id: "114710588964857494115",
+    auth_uri: "https://accounts.google.com/o/oauth2/auth",
+    token_uri: "https://oauth2.googleapis.com/token",
+    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+    client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ayo50%40ecommerce-nadim.iam.gserviceaccount.com",
+    universe_domain: "googleapis.com",
+    databaseURL: "https://ecommerce-nadim.firebaseio.com",
+  }
 
-export default environment;
+  export default environment;
+  

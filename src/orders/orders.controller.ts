@@ -142,32 +142,39 @@ export class OrdersController {
       const pdfStream = await createPDF(message);
       await uploadPDF(newOrder.order_number).catch(console.error);
       await getPDFPublicURL().catch(console.error);
-      await client.messages
-        .create({
-          body: newOrder.phone_number,
-          from: 'whatsapp:+15413039105',
-          to: 'whatsapp:+24102607070',
-          mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
-        })
-        .then((message) => console.log(message.sid));
+      // await client.messages
+      //   .create({
+      //     body: newOrder.phone_number,
+      //     from: 'whatsapp:+15413039105',
+      //     to: 'whatsapp:+24102607070',
+      //     mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
+      //   })
+      //   .then((message) => console.log(message.sid));
 
       await client.messages
-        .create({
-          body: newOrder.phone_number,
-          from: 'whatsapp:+15413039105',
-          to: 'whatsapp:+9613942350',
-          mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
-        })
-        .then((message) => console.log(message.sid));
+      .create({
+         contentSid: 'HX1fc7450760c2bb6c2c9494f157c71bf9',
+         from: 'MG1c9788b07ec909c77971000861c0b097',
+         contentVariables: JSON.stringify({
+           name: `${newOrder.phone_number}`,
+           order_number: `${newOrder.order_number}`
+         }),
+         to: 'whatsapp:+9613942350'
+       })
+      .then(message => console.log(message.sid));
 
-        await client.messages
-        .create({
-          body: newOrder.phone_number,
-          from: 'whatsapp:+14155238886',
-          to: 'whatsapp:+24102607070',
-          mediaUrl: [`https://storage.googleapis.com/leprince_pdf/${newOrder.order_number}.pdf`]
-        })
-        .then((message) => console.log(message.sid));
+      await client.messages
+      .create({
+         contentSid: 'HX1fc7450760c2bb6c2c9494f157c71bf9',
+         from: 'MG1c9788b07ec909c77971000861c0b097',
+         contentVariables: JSON.stringify({
+          name: `${newOrder.phone_number}`,
+          order_number: `${newOrder.order_number}`
+         }),
+         to: 'whatsapp:+24102607070'
+       })
+      .then(message => console.log(message.sid));
+   
       // const whatsappData1 = {
       //   "messaging_product": "whatsapp",
       //   "recipient_type": "individual",

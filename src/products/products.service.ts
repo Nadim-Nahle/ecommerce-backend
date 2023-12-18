@@ -142,27 +142,35 @@ export class ProductsService {
     const productsRef = admin.firestore().collection('products');
 
     try {
-      const querySnapshot = await productsRef.where('ref', '==', filterValue).get(); // Replace 'ref' with the desired field to search
-      const filteredProducts: Product[] = [];
+        // Fetch all documents and perform client-side filtering
+        const allProductsSnapshot = await productsRef.get();
+        const filteredProducts: Product[] = [];
 
-      querySnapshot.forEach((doc) => {
-        const data = doc.data();
-        const modifiedProduct = {
-          id: doc.id,
-          ref: data.ref,
-          name: data.name,
-          category: data.category,
-          quantity: data.quantity,
-          image: data.image,
-          price: data.price,
-          createdAt: data.createdAt
-        };
-        filteredProducts.push(modifiedProduct);
-      });
+        const normalizedFilterValue = filterValue.toLowerCase(); // Convert filterValue to lowercase
 
-      return filteredProducts;
+        allProductsSnapshot.forEach((doc) => {
+            const data = doc.data();
+            const ref = data.ref.toLowerCase(); // Convert ref to lowercase
+
+            // Check if the normalized 'ref' field contains the normalized filterValue
+            if (ref.includes(normalizedFilterValue)) {
+                const modifiedProduct = {
+                    id: doc.id,
+                    ref: data.ref,
+                    name: data.name,
+                    category: data.category,
+                    quantity: data.quantity,
+                    image: data.image,
+                    price: data.price,
+                    createdAt: data.createdAt
+                };
+                filteredProducts.push(modifiedProduct);
+            }
+        });
+
+        return filteredProducts;
     } catch (error) {
-      throw new Error(`Error filtering products by value: ${error.message}`);
+        throw new Error(`Error filtering products by value: ${error.message}`);
     }
-  }
+}
 }

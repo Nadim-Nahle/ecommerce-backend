@@ -1,0 +1,337 @@
+[
+    {
+      "ref": "POM010",
+      "name": "Pomade AFRICAN TREASURE 335g (48)",
+      "price": " 1,750"
+    },
+    {
+      "ref": "BAU004",
+      "name": "Baume ANACONDA 25ML (144)",
+      "price": " 350"
+    },
+    {
+      "ref": "TRO003",
+      "name": "Trousse BB Suisse (6pc)",
+      "price": " 6,500"
+    },
+    {
+      "ref": "GDO029",
+      "name": "Gel De Douche BB Suisse 400 ml (36)",
+      "price": " 000"
+    },
+    {
+      "ref": "HUI010",
+      "name": "Huile BEBE SUISSE 200ML (48)",
+      "price": " 1,250"
+    },
+    {
+      "ref": "LAI035",
+      "name": "lait BEBE SUISSE 400ML (36)",
+      "price": " 1,250"
+    },
+    {
+      "ref": "EDC002",
+      "name": "Eau de cologne bebe suisse 400ML (36)",
+      "price": " 1,650"
+    },
+    {
+      "ref": "HUI012",
+      "name": "Huile Bravia 60ml (72)",
+      "price": " 700"
+    },
+    {
+      "ref": "SAV11",
+      "name": "SAvon BRAVIA eclersissant 190g (48)",
+      "price": " 890"
+    },
+    {
+      "ref": "GDO021",
+      "name": "Gel de douche BRONZ TONE 475ML (30)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "GDO030",
+      "name": "Gel De Douche Bronz Tone 1 L (15 pc)",
+      "price": " 1,950"
+    },
+    {
+      "ref": "LAI053",
+      "name": "Lait Bronze Tone Maxi  200ml  (48)",
+      "price": " 1,600"
+    },
+    {
+      "ref": "LAI054",
+      "name": "Lait Citro Clear 275 ml (48)",
+      "price": " 1,350"
+    },
+    {
+      "ref": "LAI055",
+      "name": "Lait Citro Clear 500ml (24 )",
+      "price": " 2,300"
+    },
+    {
+      "ref": "DEO021",
+      "name": "Deodorant CAPRICE 200ML (36)",
+      "price": " 2,100"
+    },
+    {
+      "ref": "EDC003",
+      "name": "Eau de cologne CAPRICE 1litre (15)",
+      "price": " 3,150"
+    },
+    {
+      "ref": "BAU003",
+      "name": "Baume menthole CROCODILE 30ML (96)",
+      "price": " 400"
+    },
+    {
+      "ref": "GDO003",
+      "name": "Gel de douche D.E.S 475ML (30)",
+      "price": " 1,100"
+    },
+    {
+      "ref": "GDO022",
+      "name": "Gel de douche D.E.S 500ML Gommant (24)",
+      "price": " 1,950"
+    },
+    {
+      "ref": "GDO014",
+      "name": "Gel de douche D.E.S 1000ML (15)",
+      "price": " 1,850"
+    },
+    {
+      "ref": "EDC006",
+      "name": "Eau de cologne DUCHESSE 150ML (60)",
+      "price": " 675"
+    },
+    {
+      "ref": "CRE024",
+      "name": "Creme EFIMAX VISAGE 25ml (120)",
+      "price": " 400"
+    },
+    {
+      "ref": "GDO016",
+      "name": "Gel de douche EFIMAX 500ML (24)",
+      "price": " 2,100"
+    },
+    {
+      "ref": "SAV020",
+      "name": "Savon EFIMAX 200G (48)",
+      "price": " 950"
+    },
+    {
+      "ref": "DES013",
+      "name": "Desodorisant Era 7 couleur (36)",
+      "price": " 1,650"
+    },
+    {
+      "ref": "LAI056",
+      "name": "Lait FEEL PERLE 400ml (36)",
+      "price": " 1,500"
+    },
+    {
+      "ref": "GEL030",
+      "name": "Gel Fix 65ml Rouge (48)",
+      "price": " 350"
+    },
+    {
+      "ref": "POM011",
+      "name": "Pomade FIX INDIAN HEMP 65ML (48)",
+      "price": " 450"
+    },
+    {
+      "ref": "LAI057",
+      "name": "Lait Glutta White 500ml (24)",
+      "price": " 3,350"
+    },
+    {
+      "ref": "SAV021",
+      "name": "Savon GLUTAWHITE 190g (48)",
+      "price": " 1,200"
+    },
+    {
+      "ref": "EDT012",
+      "name": "Eau De Toilette Intense Bellisima 20ml (96)",
+      "price": " 680"
+    },
+    {
+      "ref": "EDT013",
+      "name": "Eau De Toilette Intense INDULGE 20ml (96)",
+      "price": " 680"
+    },
+    {
+      "ref": "BAU010",
+      "name": "Baume Jaguar Menthol  80 ml (120pc)",
+      "price": " 750"
+    },
+    {
+      "ref": "PAR015",
+      "name": "parfum DUO LOMANI 60ML + Roll One (24)",
+      "price": " 1,850"
+    },
+    {
+      "ref": "EDC023",
+      "name": "Eau De Cologne LOMANI 150ml (60)",
+      "price": " 650"
+    },
+    {
+      "ref": "PAR016",
+      "name": "Parfum DUO LUNE D'ETE 60ML + ROLL ON (24)",
+      "price": " 1,850"
+    },
+    {
+      "ref": "EDC024",
+      "name": "Eau De Cologne Lune D'ete 150ml (60)",
+      "price": " 680"
+    },
+    {
+      "ref": "EDC008",
+      "name": "Eau de cologne LUNE D'ETE 1L (15)",
+      "price": " 3,450"
+    },
+    {
+      "ref": "EDT014",
+      "name": "Eau De Toilette Must Diamond 100ml",
+      "price": " 750"
+    },
+    {
+      "ref": "PAR036",
+      "name": "Parfume Mr Perfect 90ml (35)",
+      "price": " 3,600"
+    },
+    {
+      "ref": "EDC025",
+      "name": "Eau De Cologne Mr Perfect 150 ml (60)",
+      "price": " 650"
+    },
+    {
+      "ref": "GEL017",
+      "name": "Gel PLAK 120ML (72)",
+      "price": " 500"
+    },
+    {
+      "ref": "DEN002",
+      "name": "Dentifrice REFLEX 150g (48)",
+      "price": " 1,250"
+    },
+    {
+      "ref": "CRE034",
+      "name": "Tube creme reparatrice REPARDINE-A 30ML (100)",
+      "price": " 750"
+    },
+    {
+      "ref": "CRE036",
+      "name": "Cream Rich and Pure 125 ml (60)",
+      "price": " 850"
+    },
+    {
+      "ref": "CRE037",
+      "name": "Cream Rich and Pure 275ml (48)",
+      "price": " 1,650"
+    },
+    {
+      "ref": "GDO005",
+      "name": "gel de douche RICH PURE 750ML (24)",
+      "price": " 2,750"
+    },
+    {
+      "ref": "HUI013",
+      "name": "Serum  Rich and Pure 30ml (72)",
+      "price": " 700"
+    },
+    {
+      "ref": "DEO001",
+      "name": "Deodorant Roll On RUSH BELLA 50ML (96)",
+      "price": " 550"
+    },
+    {
+      "ref": "DEO002",
+      "name": "Deodorant Roll On RUSH DRAGON 50ML (96)",
+      "price": " 550"
+    },
+    {
+      "ref": "EDC026",
+      "name": "Eau De Cologne Scenario 150ml (60)",
+      "price": " 650"
+    },
+    {
+      "ref": "EDT009",
+      "name": "Eau de toilette SENS carbone 50ml (48)",
+      "price": " 750"
+    },
+    {
+      "ref": "EDT002",
+      "name": "Eau de toilette SENS fresh 50ML (48)",
+      "price": " 750"
+    },
+    {
+      "ref": "EDT003",
+      "name": "Eau de toilette SENS Heat 50ML (48)",
+      "price": " 750"
+    },
+    {
+      "ref": "EDT004",
+      "name": "Eau de toilette SENS intense 50ML (48)",
+      "price": " 750"
+    },
+    {
+      "ref": "POM005",
+      "name": "Pommade Silken ANTI ITCHING 100ML (72)",
+      "price": " 600"
+    },
+    {
+      "ref": "POM006",
+      "name": "Pommade Silken COCO  100ML (72)",
+      "price": " 600"
+    },
+    {
+      "ref": "POM013",
+      "name": "Pommade Silken Indian Hemp 100ml  (72)",
+      "price": " 750"
+    },
+    {
+      "ref": "DEO022",
+      "name": "Roll-on SPA 50ml 6C (96)",
+      "price": " 400"
+    },
+    {
+      "ref": "EDC016",
+      "name": "Eau de cologne SPIRIT 5 couleurs 160ml (60)",
+      "price": " 750"
+    },
+    {
+      "ref": "DEF010",
+      "name": "Defrisant TEKNIKA 140ml pqt6 (24)",
+      "price": " 850"
+    },
+    {
+      "ref": "PAR037",
+      "name": "Parfum Touch Majestic Oud 5ml (216)",
+      "price": " 500"
+    },
+    {
+      "ref": "DEF012",
+      "name": "Defrisant UB Argan 950ml+Gel 65ml (12)",
+      "price": " 3,750"
+    },
+    {
+      "ref": "DEF013",
+      "name": "Defrisant UB Argan Oil 950ml (12)",
+      "price": " 3,500"
+    },
+    {
+      "ref": "GEL031",
+      "name": "Gel UB Noire 150ml (96)",
+      "price": " 700"
+    },
+    {
+      "ref": "GEL018",
+      "name": "Gel X WAVES 80ML (96)",
+      "price": " 700"
+    },
+    {
+      "ref": "GEL019",
+      "name": "Gel X WAVES 160 ML (60)",
+      "price": " 1,600"
+    }
+   ]

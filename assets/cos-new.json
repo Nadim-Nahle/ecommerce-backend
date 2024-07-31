@@ -1,0 +1,302 @@
+[
+    {
+      "ref": "BAU006",
+      "name": "Baume de nerf tiger joe 130 jaune (120)",
+      "price": " 750"
+    },
+    {
+      "ref": "BAU007",
+      "name": "Baume de nerf Tiger Joe 130ml vert (120)",
+      "price": " 750"
+    },
+    {
+      "ref": "BAU008",
+      "name": "Baume de nerf tiger joe 130ML Bleu  (120)",
+      "price": " 750"
+    },
+    {
+      "ref": "BAU009",
+      "name": "Baume de nerf tiger joe  Rouge  130ML  (120)",
+      "price": " 750"
+    },
+    {
+      "ref": "CR001",
+      "name": "Creme GOLD SKIN huile Argan 140(48)",
+      "price": " 800"
+    },
+    {
+      "ref": "CR002",
+      "name": "Creme GOLD SKIN Escargot 140(48)",
+      "price": " 800"
+    },
+    {
+      "ref": "CR009",
+      "name": "Creme COCODERM 150ML  (96)",
+      "price": " 650"
+    },
+    {
+      "ref": "CR010",
+      "name": "Creme Miss CAROLINE 150ML (96)",
+      "price": " 650"
+    },
+    {
+      "ref": "CR011",
+      "name": "Creme PEAU CLAIRE 150ML (96)",
+      "price": " 650"
+    },
+    {
+      "ref": "CR012",
+      "name": "Creme de beaute Sivoderm 180ML (96)",
+      "price": " 650"
+    },
+    {
+      "ref": "CRE018",
+      "name": "Creme Familia citron 390ml (48)",
+      "price": " 900"
+    },
+    {
+      "ref": "CRE035",
+      "name": "Creme FAMILIA 390ML Blacnhe (48)",
+      "price": " 950"
+    },
+    {
+      "ref": "GDO006",
+      "name": "Gel douche Gold skin Argan 1L (12)",
+      "price": " 1,950"
+    },
+    {
+      "ref": "GDO007",
+      "name": "Gel douche Gold Skin Escargot 1 litre (12)",
+      "price": " 1,950"
+    },
+    {
+      "ref": "GDO023",
+      "name": "Gel de douche BIOCARROT 500ML (24)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "GDO024",
+      "name": "Gel douche BIOSKIN 500ML (24)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "GDO025",
+      "name": "Gel de douche CLAIR LISS 500ML (24)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "GDO026",
+      "name": "Gel de douche COCODERM 500ML (24)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "GDO027",
+      "name": "Gel de douche GOLD SKIN  ESCARGOT 500ML (24)",
+      "price": " 1,200"
+    },
+    {
+      "ref": "LAI047",
+      "name": "lait FAMILIA VT E 300ML (48)",
+      "price": " 750"
+    },
+    {
+      "ref": "GDO028",
+      "name": "Gel de douche GOLD SKIN ARGAN 500ML (24)",
+      "price": " 1,200"
+    },
+    {
+      "ref": "LAI_001",
+      "name": "Lait Biocarrot 150 ml (48)",
+      "price": " 700"
+    },
+    {
+      "ref": "LAI_002",
+      "name": "Lait Biocarrot 250 ml (48)",
+      "price": " 1,250"
+    },
+    {
+      "ref": "LAI_003",
+      "name": "Lait Bioskin 150 ml (48)",
+      "price": " 700"
+    },
+    {
+      "ref": "LAI_004",
+      "name": "Lait Bioskin 250 ml (48)",
+      "price": " 1,250"
+    },
+    {
+      "ref": "LAI_005",
+      "name": "Lait Gold Skin Huile Argant 250 (36)",
+      "price": " 1,400"
+    },
+    {
+      "ref": "LAI_006",
+      "name": "Lait Gold Skin Escargo 250 (36)",
+      "price": " 1,400"
+    },
+    {
+      "ref": "LAI_008",
+      "name": "Lait familia 200 ml(60)",
+      "price": " 550"
+    },
+    {
+      "ref": "LAI_009",
+      "name": "Lait Familia 300ML ALOE VERRA 48)",
+      "price": " 750"
+    },
+    {
+      "ref": "LAI_010",
+      "name": "Lait FAMILIA 500ML VIT E(48)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "LAI_011",
+      "name": "Lait Familia 750 ml (24)",
+      "price": " 1,600"
+    },
+    {
+      "ref": "LAI_012",
+      "name": "Lait Lady Diana 200 ml (96)",
+      "price": " 450"
+    },
+    {
+      "ref": "LAI_013",
+      "name": "Lait Lemonsheen 200 ml (96)",
+      "price": " 450"
+    },
+    {
+      "ref": "LAI_014",
+      "name": "Lait Opinion 200ml (96)",
+      "price": " 450"
+    },
+    {
+      "ref": "LAI_015",
+      "name": "Lait Sivoderm 220 ml (60)",
+      "price": " 1,000"
+    },
+    {
+      "ref": "LAI_017",
+      "name": "Lait Sivoderm Collagene 250 (48)",
+      "price": " 750"
+    },
+    {
+      "ref": "LAI_018",
+      "name": "Lait Tanti 200 ml (96)",
+      "price": " 450"
+    },
+    {
+      "ref": "LAI011",
+      "name": "Lait INOVA 500ML (48)",
+      "price": " 1,850"
+    },
+    {
+      "ref": "LAI028",
+      "name": "Lait FAMILIA CITRON 500ml (48)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "LAI029",
+      "name": "lait Cocoderm 275ml (48)",
+      "price": " 1,200"
+    },
+    {
+      "ref": "LAI043",
+      "name": "lait peau claire 250ML (48)",
+      "price": " 1,200"
+    },
+    {
+      "ref": "LAI046",
+      "name": "Lait FAMILIA AMANDE 300ML (48)",
+      "price": " 750"
+    },
+    {
+      "ref": "LAI045",
+      "name": "Lait MISS CAROLINE 250ML (48)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "LAI044",
+      "name": "lait SIVOCLAIR 250ML (48)",
+      "price": " 1,200"
+    },
+    {
+      "ref": "LAI048",
+      "name": "Lait FAMILIA AMANDE 500ML (48)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "LAI049",
+      "name": "Lait FAMILIA ALOE VERA 500ML (48)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "LAI050",
+      "name": "Lait FAMILIA H. INTENSE 500ML (48)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "PAR019",
+      "name": "parfum MARQUISE BLEU 100ML (72)",
+      "price": " 2,100"
+    },
+    {
+      "ref": "POM002",
+      "name": "Pommade Sulfur 18-100ml (96)",
+      "price": "750"
+    },
+    {
+      "ref": "POM012",
+      "name": "Pommade FAMILIA 220ML (96)",
+      "price": " 850"
+    },
+    {
+      "ref": "SAV017",
+      "name": "Savon de beaute SIVODERM  230g (48)",
+      "price": " 1,000"
+    },
+    {
+      "ref": "SAV_002",
+      "name": "Savon Gommant SIVODERM 230gr (48)",
+      "price": " 1,050"
+    },
+    {
+      "ref": "SAV_003",
+      "name": "Savon Gold Skin Argant 180gr (48)",
+      "price": " 800"
+    },
+    {
+      "ref": "SAV_004",
+      "name": "Savon GOLD skin Escargot 180 gr (48)",
+      "price": " 800"
+    },
+    {
+      "ref": "SAV16",
+      "name": "Savon Sivoderme antibacterien 100g (144)",
+      "price": " 550"
+    },
+    {
+      "ref": "SAV026",
+      "name": "Savon BIOCARROT 180G (48)",
+      "price": " 800"
+    },
+    {
+      "ref": "SAV027",
+      "name": "Swavon BIOSKIN 180G (72)",
+      "price": " 800"
+    },
+    {
+      "ref": "SHA001",
+      "name": "Shampoing SULFUR 18-200 ml (60)",
+      "price": " 550"
+    },
+    {
+      "ref": "SHA002",
+      "name": "Shampoing SULFUR 18-500 ml (48)",
+      "price": " 1,150"
+    },
+    {
+      "ref": "TAL001",
+      "name": "TALC Sivoderm 70Grs (144)",
+      "price": " 500"
+    }
+   ]

@@ -154,7 +154,7 @@ export class OrdersController {
       await client.messages
       .create({
          contentSid:  process.env.contentSid,
-         from: 'MG1c9788b07ec909c77971000861c0b097',
+         from: process.env.contentSender,
          contentVariables: JSON.stringify({
            name: `${newOrder.phone_number}`,
            order_number: `${newOrder.order_number}`
@@ -165,8 +165,8 @@ export class OrdersController {
 
       await client.messages
       .create({
-         contentSid: 'HX1fc7450760c2bb6c2c9494f157c71bf9',
-         from: 'MG1c9788b07ec909c77971000861c0b097',
+         contentSid: process.env.contentSid,
+         from: process.env.contentSender,
          contentVariables: JSON.stringify({
           name: `${newOrder.phone_number}`,
           order_number: `${newOrder.order_number}`

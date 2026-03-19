@@ -11,8 +11,8 @@ var publicUrl;
 const bucketName = 'leprince_pdf';
 const pdfFilePath = '/tmp/order.pdf';
 
-const accountSid = 'ACbd28c015da2c8a0bce32fa78ccb2875a';
-const authToken = 'f32425eb589c91ae5953fc2d7fc48d67';
+const accountSid = process.env.accountSid;
+const authToken = process.env.authToken;
 const client = require('twilio')(accountSid, authToken);
 
 const storage = new Storage();
@@ -44,7 +44,7 @@ async function getPDFPublicURL() {
 
 async function sendWhatsapp(whatsappData) {
   const url = 'https://graph.facebook.com/v17.0/196321863557428/messages';
-  const accessToken = 'EAAEuS7hNQOsBO9QovUA9PxYlwb8kPdOsFU2tXN1gvmOZCVbZBwI0OdmW2NlHYjNxTuUHWboQHpJabtFvP08VofIkX4BjkM1iMo0ZAtgyqt7oTcPGxEJDY1Dy4kBexKrznCaFex8i8ilfKFz2kNeabh4o50gN37btUSg198L5Q1kwWVpbZAZCtScaomFnWX3xTCSpCG3jd4ysPUzDyR9Nz26UPhCwZD'; // Replace with your actual access token
+  const accessToken = process.env.accessToken; // acces token
 
   const headers = {
     'Authorization': `Bearer ${accessToken}`,
@@ -153,7 +153,7 @@ export class OrdersController {
 
       await client.messages
       .create({
-         contentSid: 'HX1fc7450760c2bb6c2c9494f157c71bf9',
+         contentSid:  process.env.contentSid,
          from: 'MG1c9788b07ec909c77971000861c0b097',
          contentVariables: JSON.stringify({
            name: `${newOrder.phone_number}`,
